@@ -1,6 +1,6 @@
 ﻿function fetch(ID, Description, Problem, Key, Count, CustomTime) {
      
-	var apiUrl = 'http://api.uptimerobot.com/getMonitors?logs=1&format=xml&responseTimes=1&apiKey=' + Key;
+	var apiUrl = 'http://api.uptimerobot.com/getMonitors?logs=1&format=xml&responseTimes=1&responseTimesAverage=30&apiKey=' + Key;
 	 
 	if (CustomTime) {apiUrl += '&customUptimeRatio=' + CustomTime;}
 	 
@@ -72,14 +72,37 @@
 					
 					html += '<div class="breaker"></div>';
 					
+					var chartdata = [
+						{
+							label: 'Tiempo de Respuesta',
+							strokeColor: '#f3f3f3',
+							data: []
+						}];
+					
+					var maxy = 0;
+					
 					$(this).find("responsetime").each(function(){
-						html += '<h5>Response Time</h5>';
+						/*html += '<h5>Response Time</h5>';
 						html += '<h6 class="boxed';
 						if ($(this).attr('value') > 300){ html += ' down'; }
 						else { html += ' up'; }
 						html += ' faded">' + $(this).attr('value') + ' ms' + ' &nbsp;&middot;&nbsp; ' + $(this).attr('datetime') + '</h6>';
-						html += '<div class="breaker"></div>';
+						html += '<div class="breaker"></div>';*/
+						chartdata[0].data.push({
+									x: new Date($(this).attr('datetime')),
+									y: $(this).attr('value')
+								});
+						
+						if($(this).attr('value')>maxy){maxy = $(this).attr('value');}
 					});
+					
+					/* chart */
+					if(maxy>0){
+						html +=  '<h5>Tiempo de Respuesta</h5>';
+						html += '<div class="boxed"><div><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
+						html += '<div class="breaker"></div>';
+					}
+					
 					
 					html +=  '<h5>Eventos</h5>';
 					
@@ -107,6 +130,40 @@
 					
 					//Add to the DOM	
 					$("#maincontent .section").append(html);
+					
+					//Draw chart
+					if(maxy>0){
+						var ctx = $("#chart-" + $(this).attr('id')).get(0).getContext("2d");
+						var myNewChart = new Chart(ctx).Scatter(chartdata, {
+							bezierCurve: true,
+							scaleShowLabels: false,
+							scaleLineColor: "white",
+							showTooltips: true,
+							scaleLabel: "<%=value%> ms",
+							responsive: true,
+							// GRID LINES
+							scaleShowGridLines: false,					
+							// VERTICAL SCALE RANGE
+							scaleOverride: true,
+							scaleSteps: 4,
+							scaleStepWidth: 1000 + Math.round(maxy/1000)*1000/4,
+							scaleStartValue: 0,						
+							// DATE SCALE
+							scaleTimeFormat: "HH'h'",
+							scaleDateFormat: "dddd",
+							scaleDateTimeFormat: "HH:MM, dd/mm/yyyy",
+							scaleType: "date",
+							// LINES
+							datasetPointStrokeColor: '#f9f9f9',
+							datasetStrokeWidth: 4,
+							// POINTS
+							pointDotRadius: 0,
+							// TEMPLATE
+							//tooltipTemplate: "<%if (datasetLabel){%><%=datasetLabel%>: <%}%><%=valueLabel%>; <%=argLabel%>"
+							tooltipTemplate: "<%=valueLabel%>; <%=argLabel%>",
+							multiTooltipTemplate: "<%=valueLabel%>; <%=argLabel%>"
+						});
+					}					
 					
 					//How many are there
 					var displayed = $("#maincontent .section .col").length;
