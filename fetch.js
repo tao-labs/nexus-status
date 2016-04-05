@@ -48,30 +48,6 @@
 					}
 					html += '</p>';
 					
-					html += '<h3 class="box ' + direction + '">' + status + '</h3>';
-					
-					if (CustomTime) {
-						if ($(this).attr('customuptimeratio') >= 99) {
-							direction = 'up';
-						} else if ($(this).attr('customuptimeratio') >= 90) {
-							direction = 'level';
-						} else {
-							direction = 'down';
-						}
-						html += '<h4 class="box ' + direction + '">' + $(this).attr('customuptimeratio') + '% Uptime</h4>';
-					} else {
-						if ($(this).attr('alltimeuptimeratio') >= 99) {
-							direction = 'up';
-						} else if ($(this).attr('alltimeuptimeratio') >= 90) {
-							direction = 'level';
-						} else {
-							direction = 'down';
-						}
-						html += '<h4 class="box ' + direction + '">' + $(this).attr('alltimeuptimeratio') + '% Uptime</h4>';
-					}
-					
-					html += '<div class="breaker"></div>';
-					
 					var chartdata = [
 						{
 							label: 'Tiempo de Respuesta',
@@ -103,6 +79,29 @@
 						html += '<div class="breaker"></div>';
 					}
 					
+					html += '<h3 class="box ' + direction + '">' + status + '</h3>';
+					
+					if (CustomTime) {
+						if ($(this).attr('customuptimeratio') >= 99) {
+							direction = 'up';
+						} else if ($(this).attr('customuptimeratio') >= 90) {
+							direction = 'level';
+						} else {
+							direction = 'down';
+						}
+						html += '<h4 class="box ' + direction + '">' + $(this).attr('customuptimeratio') + '% Uptime</h4>';
+					} else {
+						if ($(this).attr('alltimeuptimeratio') >= 99) {
+							direction = 'up';
+						} else if ($(this).attr('alltimeuptimeratio') >= 90) {
+							direction = 'level';
+						} else {
+							direction = 'down';
+						}
+						html += '<h4 class="box ' + direction + '">' + $(this).attr('alltimeuptimeratio') + '% Uptime</h4>';
+					}
+					
+					html += '<div class="breaker"></div>';
 					
 					html +=  '<h5>Eventos</h5>';
 					
