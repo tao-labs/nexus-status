@@ -1,6 +1,6 @@
 ﻿function fetch(ID, Description, Problem, Key, Count, CustomTime) {
      
-	var apiUrl = 'http://api.uptimerobot.com/getMonitors?logs=1&format=xml&apiKey=' + Key;
+	var apiUrl = 'http://api.uptimerobot.com/getMonitors?logs=1&format=xml&responseTimes=1&apiKey=' + Key;
 	 
 	if (CustomTime) {apiUrl += '&customUptimeRatio=' + CustomTime;}
 	 
