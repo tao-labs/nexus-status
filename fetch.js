@@ -74,7 +74,7 @@
 					
 					/* chart */
 					if(maxy>0){
-						html +=  '<h5>Tiempo de Respuesta</h5>';
+						//html +=  '<h5>Tiempo de Respuesta</h5>';
 						html += '<div class="boxed"><div><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
 						html += '<div class="breaker"></div>';
 					}
