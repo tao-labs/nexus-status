@@ -82,6 +82,7 @@
 					
 					var maxy = 0;
 					var lastResponse = 0;
+					var magnitude = 0;
 					
 					$(this).find("responsetime").each(function(){
 						/*html += '<h5>Response Time</h5>';
@@ -100,6 +101,8 @@
 					
 					/* Chart DOM */
 					if(maxy>0){
+						var order = Math.floor(Math.log(n) / Math.LN10 + 0.000000001); // because float math sucks like that
+    						magnitude = Math.pow(10,order);
 						lastResponse = $(this).find("responsetime").first().attr('value');
 						//html +=  '<h5>Tiempo de Respuesta</h5>';
 						html += '<h5 class="equalize boxed up noborder">' + lastResponse + ' ms</h5>';
@@ -150,7 +153,7 @@
 							// VERTICAL SCALE RANGE
 							scaleOverride: true,
 							scaleSteps: 4,
-							scaleStepWidth: 1000 + Math.round(maxy/1000)*1000/4,
+							scaleStepWidth: magnitude + Math.round(maxy/magnitude)*magnitude/4,
 							scaleStartValue: 0,						
 							// DATE SCALE
 							scaleTimeFormat: "HH'h'",
