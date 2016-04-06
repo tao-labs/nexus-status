@@ -101,7 +101,7 @@
 					
 					/* Chart DOM */
 					if(maxy>0){
-						var order = Math.floor(Math.log(n) / Math.LN10 + 0.000000001); // because float math sucks like that
+						var order = Math.floor(Math.log(maxy) / Math.LN10 + 0.000000001); // because float math sucks like that
     						magnitude = Math.pow(10,order);
 						lastResponse = $(this).find("responsetime").first().attr('value');
 						//html +=  '<h5>Tiempo de Respuesta</h5>';
