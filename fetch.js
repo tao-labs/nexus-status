@@ -215,7 +215,7 @@ var ApiKeys = [
 ];
 
 var Descriptions = [
-	'Conectividad de red hacia Internet',
+	'Conectividad con Internet',
 	'Entorno de producción',
 	'Entorno de preproducción',
 	'Entorno de desarrollo privado',
