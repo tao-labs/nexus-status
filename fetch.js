@@ -48,6 +48,31 @@
 					}
 					html += '</p>';
 					
+					html += '<h3 class="box ' + direction + '">' + status + '</h3>';
+					
+					if (CustomTime) {
+						if ($(this).attr('customuptimeratio') >= 99) {
+							direction = 'up';
+						} else if ($(this).attr('customuptimeratio') >= 90) {
+							direction = 'level';
+						} else {
+							direction = 'down';
+						}
+						html += '<h4 class="boxed ' + direction + '">' + $(this).attr('customuptimeratio') + '% Uptime</h4>';
+					} else {
+						if ($(this).attr('alltimeuptimeratio') >= 99) {
+							direction = 'up';
+						} else if ($(this).attr('alltimeuptimeratio') >= 90) {
+							direction = 'level';
+						} else {
+							direction = 'down';
+						}
+						html += '<h4 class="boxed ' + direction + '">' + $(this).attr('alltimeuptimeratio') + '% Uptime</h4>';
+					}
+					
+					html += '<div class="breaker"></div>';
+					
+					/* Chart Data */
 					var chartdata = [
 						{
 							label: 'Tiempo de Respuesta',
@@ -73,38 +98,14 @@
 						if($(this).attr('value')>maxy){maxy = $(this).attr('value');}
 					});
 					
-					/* chart */
+					/* Chart DOM */
 					if(maxy>0){
 						lastResponse = $(this).find("responsetime").first().attr('value');
 						//html +=  '<h5>Tiempo de Respuesta</h5>';
-						html += '<div class="boxed"><div><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
 						html += '<h5 class="equalize boxed up noborder">' + lastResponse + ' ms</h5>';
+						html += '<div class="boxed"><div><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
 						html += '<div class="breaker"></div>';
 					}
-					
-					html += '<h3 class="box ' + direction + '">' + status + '</h3>';
-					
-					if (CustomTime) {
-						if ($(this).attr('customuptimeratio') >= 99) {
-							direction = 'up';
-						} else if ($(this).attr('customuptimeratio') >= 90) {
-							direction = 'level';
-						} else {
-							direction = 'down';
-						}
-						html += '<h4 class="boxed ' + direction + '">' + $(this).attr('customuptimeratio') + '% Uptime</h4>';
-					} else {
-						if ($(this).attr('alltimeuptimeratio') >= 99) {
-							direction = 'up';
-						} else if ($(this).attr('alltimeuptimeratio') >= 90) {
-							direction = 'level';
-						} else {
-							direction = 'down';
-						}
-						html += '<h4 class="boxed ' + direction + '">' + $(this).attr('alltimeuptimeratio') + '% Uptime</h4>';
-					}
-					
-					html += '<div class="breaker"></div>';
 					
 					html +=  '<h5>Eventos</h5>';
 					
