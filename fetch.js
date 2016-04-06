@@ -82,6 +82,7 @@
 					
 					var maxy = 0;
 					var miny = 99999999;
+					var centery = 0;
 					var lastResponse = 0;
 					var magnitude = 0;
 					
@@ -103,7 +104,7 @@
 					
 					/* Chart DOM */
 					if(maxy>0){
-						var centery = (maxy + miny) / 2
+						centery = (maxy + miny) / 2
 						var order = Math.floor(Math.log(centery) / Math.LN10 + 0.000000001); // because float math sucks like that
     						magnitude = Math.pow(10,order);
 						lastResponse = $(this).find("responsetime").first().attr('value');
