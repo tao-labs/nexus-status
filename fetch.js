@@ -80,11 +80,11 @@
 							data: []
 						}];
 					
-					var maxy = parseInt(0);
-					var miny = parseInt(999999);
-					var centery = parseInt(0);
+					var maxy = 0;
+					var miny = 999999;
+					var centery = 0;
 					var lastResponse = 0;
-					var magnitude = parseInt(0);
+					var magnitude = 0;
 					
 					$(this).find("responsetime").each(function(){
 						/*html += '<h5>Response Time</h5>';
@@ -104,7 +104,7 @@
 					
 					/* Chart DOM */
 					if(maxy>0){
-						centery = (maxy + miny) / 2
+						centery = (parseInt(maxy) + parseInt(miny)) / 2
 						var order = Math.floor(Math.log(centery) / Math.LN10 + 0.000000001); // because float math sucks like that
     						magnitude = Math.pow(10,order);
 						lastResponse = $(this).find("responsetime").first().attr('value');
