@@ -159,8 +159,8 @@
 							scaleSteps: 4,
 							//scaleStepWidth: magnitude + Math.round(maxy/magnitude)*magnitude/4,
 							//scaleStartValue: 0,
-							scaleStepWidth: magnitude + Math.round((maxy-miny)/magnitude)*magnitude/4,
-							scaleStartValue: centery - Math.round((maxy-miny)/magnitude)*magnitude/2,						
+							scaleStepWidth: magnitude * 2,
+							scaleStartValue: centery - magnitude*2,						
 							// DATE SCALE
 							scaleTimeFormat: "HH'h'",
 							scaleDateFormat: "dddd",
