@@ -199,6 +199,7 @@
 
 
 var IDs = [
+	'777619939',
 	'777605993',
 	'777605997',
 	'777605998',
@@ -206,6 +207,7 @@ var IDs = [
 ];
 
 var ApiKeys = [
+	'm777619939-149cfd15699773cbbf493e17',
 	'm777605993-fe471da267567bbbdd89223d',
 	'm777605997-d184e7177fba16f4f2c9b6ab',
 	'm777605998-a84aa45ca6e4788e0d23a798',
@@ -213,6 +215,7 @@ var ApiKeys = [
 ];
 
 var Descriptions = [
+	'Conectividad de red hacia Internet',
 	'Entorno de producción',
 	'Entorno de preproducción',
 	'Entorno de desarrollo privado',
@@ -220,6 +223,7 @@ var Descriptions = [
 ];
 
 var Apologies = [
+	'There has been an error, have you felt it?',
 	'Our website is down, you will not be able to sign up. Sorry!',
 	'Trained bees have been dispatched to fix our over-heating servers.',
 	'Area 69 has been retired.',
