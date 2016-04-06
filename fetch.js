@@ -160,7 +160,7 @@
 							scaleSteps: 3,
 							//scaleStepWidth: magnitude + Math.round(maxy/magnitude)*magnitude/4,
 							//scaleStartValue: 0,
-							scaleStepWidth: magnitude * 1.5,
+							scaleStepWidth: magnitude * 1,
 							scaleStartValue: centery - magnitude*1.5,						
 							// DATE SCALE
 							scaleTimeFormat: "HH'h'",
