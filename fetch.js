@@ -139,6 +139,7 @@
 						var ctx = $("#chart-" + $(this).attr('id')).get(0).getContext("2d");
 						var myNewChart = new Chart(ctx).Scatter(chartdata, {
 							bezierCurve: true,
+							animation: false,
 							scaleShowLabels: false,
 							scaleLineColor: "white",
 							showTooltips: true,
