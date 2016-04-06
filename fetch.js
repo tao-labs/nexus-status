@@ -80,11 +80,11 @@
 							data: []
 						}];
 					
-					var maxy = 0;
-					var miny = 99999999;
-					var centery = 0;
+					var maxy = parseInt(0);
+					var miny = parseInt(999999);
+					var centery = parseInt(0);
 					var lastResponse = 0;
-					var magnitude = 0;
+					var magnitude = parseInt(0);
 					
 					$(this).find("responsetime").each(function(){
 						/*html += '<h5>Response Time</h5>';
