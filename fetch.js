@@ -56,6 +56,7 @@
 						}];
 					
 					var maxy = 0;
+					var lastResponse = 0;
 					
 					$(this).find("responsetime").each(function(){
 						/*html += '<h5>Response Time</h5>';
@@ -75,7 +76,8 @@
 					/* chart */
 					if(maxy>0){
 						//html +=  '<h5>Tiempo de Respuesta</h5>';
-						html += '<div class="boxed"><div><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
+						//html += '<h5 class="equalize boxed up noborder">' + lastResponse + ' ms</h5>';
+						html += '<div class="boxed"><div><h5 class="equalize boxed up noborder">' + lastResponse + ' ms</h5><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
 						html += '<div class="breaker"></div>';
 					}
 					
