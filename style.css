@@ -251,6 +251,7 @@ img {
 .floatright { float: right; }
 
 .breaker { margin: 3% 0; padding: 1px; height: 1px; }
+.breaker.xl { height: 35px; }
 
 .faded {
 	opacity: .7;
