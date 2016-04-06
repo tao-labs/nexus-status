@@ -75,9 +75,10 @@
 					
 					/* chart */
 					if(maxy>0){
+						lastResponse = $(this).find("responsetime").first().attr('value');
 						//html +=  '<h5>Tiempo de Respuesta</h5>';
-						//html += '<h5 class="equalize boxed up noborder">' + lastResponse + ' ms</h5>';
-						html += '<div class="boxed"><div><h5 class="equalize boxed up noborder">' + lastResponse + ' ms</h5><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
+						html += '<div class="boxed"><div><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
+						html += '<h5 class="equalize boxed up noborder">' + lastResponse + ' ms</h5>';
 						html += '<div class="breaker"></div>';
 					}
 					
@@ -91,7 +92,7 @@
 						} else {
 							direction = 'down';
 						}
-						html += '<h4 class="box ' + direction + '">' + $(this).attr('customuptimeratio') + '% Uptime</h4>';
+						html += '<h4 class="boxed ' + direction + '">' + $(this).attr('customuptimeratio') + '% Uptime</h4>';
 					} else {
 						if ($(this).attr('alltimeuptimeratio') >= 99) {
 							direction = 'up';
@@ -100,7 +101,7 @@
 						} else {
 							direction = 'down';
 						}
-						html += '<h4 class="box ' + direction + '">' + $(this).attr('alltimeuptimeratio') + '% Uptime</h4>';
+						html += '<h4 class="boxed ' + direction + '">' + $(this).attr('alltimeuptimeratio') + '% Uptime</h4>';
 					}
 					
 					html += '<div class="breaker"></div>';
@@ -124,7 +125,7 @@
 							direction = 'down';
 							status = 'AWOL';
 						}
-						html += '<h6 class="boxed ' + direction + ' faded">' + status + ' &nbsp;&middot;&nbsp; ' + $(this).attr('datetime') + '</h6>';					
+						html += '<h6 class="boxed noborder ' + direction + ' faded">' + status + ' &nbsp;&middot;&nbsp; ' + $(this).attr('datetime') + '</h6>';					
 					});
 					
 					html += '</div>';
