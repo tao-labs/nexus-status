@@ -83,6 +83,7 @@
 					var maxy = 0;
 					var miny = 999999;
 					var centery = 0;
+					var average = 0;
 					var lastResponse = 0;
 					var magnitude = 0;
 					
@@ -100,10 +101,12 @@
 						
 						if($(this).attr('value')>maxy){maxy = $(this).attr('value');}
 						if($(this).attr('value')<miny){miny = $(this).attr('value');}
+						average = parseInt(average) + parseInt($(this).attr('value'));
 					});
 					
 					/* Chart DOM */
 					if(maxy>0){
+						average = average / $(this).find("responsetime").length;
 						centery = (parseInt(maxy) + parseInt(miny)) / 2
 						var order = Math.floor(Math.log(centery) / Math.LN10 + 0.000000001); // because float math sucks like that
     						magnitude = Math.pow(10,order);
@@ -160,8 +163,8 @@
 							scaleSteps: 3,
 							//scaleStepWidth: magnitude + Math.round(maxy/magnitude)*magnitude/4,
 							//scaleStartValue: 0,
-							scaleStepWidth: magnitude * 1,
-							scaleStartValue: centery - magnitude*1.5,						
+							scaleStepWidth: magnitude * 2,
+							scaleStartValue: average - magnitude*3,						
 							// DATE SCALE
 							scaleTimeFormat: "HH'h'",
 							scaleDateFormat: "dddd",
