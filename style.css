@@ -283,6 +283,8 @@ h6.box { color: #000000 !important; }
 .boxed.level { border: 1px solid #e67e22; color: #e67e22;}
 .boxed.none { border: 1px solid #95a5a6; color: #95a5a6;}
 
+.boxed.noborder { border: none;}
+
 p.equalize{
 	font-size: 1.2em;
 }
