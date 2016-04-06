@@ -157,11 +157,11 @@
 							scaleShowGridLines: false,					
 							// VERTICAL SCALE RANGE
 							scaleOverride: true,
-							scaleSteps: 4,
+							scaleSteps: 3,
 							//scaleStepWidth: magnitude + Math.round(maxy/magnitude)*magnitude/4,
 							//scaleStartValue: 0,
-							scaleStepWidth: magnitude * 2,
-							scaleStartValue: centery - magnitude*2,						
+							scaleStepWidth: magnitude * 1.5,
+							scaleStartValue: centery - magnitude*1.5,						
 							// DATE SCALE
 							scaleTimeFormat: "HH'h'",
 							scaleDateFormat: "dddd",
