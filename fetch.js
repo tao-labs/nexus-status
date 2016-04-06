@@ -146,7 +146,7 @@
 					
 					//Draw chart
 					if(maxy>0){
-						console.log("maxy: "+maxy+" / miny: "+miny+" / centery: "+centery+" / magnitude: "+magnitude);
+						//console.log("maxy: "+maxy+" / miny: "+miny+" / centery: "+centery+" / magnitude: "+magnitude);
 						var ctx = $("#chart-" + $(this).attr('id')).get(0).getContext("2d");
 						var myNewChart = new Chart(ctx).Scatter(chartdata, {
 							bezierCurve: true,
