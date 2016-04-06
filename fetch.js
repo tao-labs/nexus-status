@@ -81,6 +81,7 @@
 						}];
 					
 					var maxy = 0;
+					var miny = 99999999;
 					var lastResponse = 0;
 					var magnitude = 0;
 					
@@ -97,11 +98,13 @@
 								});
 						
 						if($(this).attr('value')>maxy){maxy = $(this).attr('value');}
+						if($(this).attr('value')<miny){miny = $(this).attr('value');}
 					});
 					
 					/* Chart DOM */
 					if(maxy>0){
-						var order = Math.floor(Math.log(maxy) / Math.LN10 + 0.000000001); // because float math sucks like that
+						var centery = (maxy + miny) / 2
+						var order = Math.floor(Math.log(centery) / Math.LN10 + 0.000000001); // because float math sucks like that
     						magnitude = Math.pow(10,order);
 						lastResponse = $(this).find("responsetime").first().attr('value');
 						//html +=  '<h5>Tiempo de Respuesta</h5>';
@@ -153,8 +156,10 @@
 							// VERTICAL SCALE RANGE
 							scaleOverride: true,
 							scaleSteps: 4,
-							scaleStepWidth: magnitude + Math.round(maxy/magnitude)*magnitude/4,
-							scaleStartValue: 0,						
+							//scaleStepWidth: magnitude + Math.round(maxy/magnitude)*magnitude/4,
+							//scaleStartValue: 0,
+							scaleStepWidth: magnitude + Math.round((maxy-miny)/magnitude)*magnitude/4,
+							scaleStartValue: centery - Math.round((maxy-miny)/magnitude)*magnitude/2,						
 							// DATE SCALE
 							scaleTimeFormat: "HH'h'",
 							scaleDateFormat: "dddd",
