@@ -18,7 +18,11 @@
 					var html = '';
 	
 					html += '<div class="col span_1_of_' + Count +'" data-index="'+ ID +'">';
-					html += '<a href="' + $(this).attr('url') + '"><img height="100px" src="' + $(this).attr('id') + '.png" alt="' + $(this).attr('friendlyname') + '"></a>'
+					if($(this).attr('type')==1)){
+						html += '<a href="' + $(this).attr('url') + '"><img height="100px" src="' + $(this).attr('id') + '.png" alt="' + $(this).attr('friendlyname') + '"></a>'
+					}else{
+						html += '<img height="100px" src="' + $(this).attr('id') + '.png" alt="' + $(this).attr('friendlyname') + '">';
+					}
 					html += '<h2>' + $(this).attr('friendlyname') + '</h2>';
 					
 					if ($(this).attr('status') == 2) {
