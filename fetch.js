@@ -18,7 +18,7 @@
 					var html = '';
 	
 					html += '<div class="col span_1_of_' + Count +'" data-index="'+ ID +'">';
-					if($(this).attr('type')==1)){
+					if($(this).attr('type')==1){
 						html += '<a href="' + $(this).attr('url') + '"><img height="100px" src="' + $(this).attr('id') + '.png" alt="' + $(this).attr('friendlyname') + '"></a>'
 					}else{
 						html += '<img height="100px" src="' + $(this).attr('id') + '.png" alt="' + $(this).attr('friendlyname') + '">';
