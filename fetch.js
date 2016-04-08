@@ -172,7 +172,7 @@
 						// DATE SCALE
 						scaleTimeFormat: "HH'h'",
 						scaleDateFormat: "dddd",
-						scaleDateTimeFormat: "HH:MM, dd/mm/yyyy",
+						scaleDateTimeFormat: "HH:MM, dd/mm",
 						scaleType: "date",
 						// LINES
 						datasetPointStrokeColor: '#f9f9f9',
