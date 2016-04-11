@@ -56,22 +56,22 @@
 				
 				if (CustomTime) {
 					if ($(this).attr('customuptimeratio') >= 99) {
-						direction = 'up';
+						var ratio = 'up';
 					} else if ($(this).attr('customuptimeratio') >= 90) {
-						direction = 'level';
+						var ratio = 'level';
 					} else {
-						direction = 'down';
+						var ratio = 'down';
 					}
-					html += '<h4 class="boxed ' + direction + '">' + $(this).attr('customuptimeratio') + '% Uptime</h4>';
+					html += '<h4 class="boxed ' + ratio + '">' + $(this).attr('customuptimeratio') + '% Uptime</h4>';
 				} else {
 					if ($(this).attr('alltimeuptimeratio') >= 99) {
-						direction = 'up';
+						var ratio = 'up';
 					} else if ($(this).attr('alltimeuptimeratio') >= 90) {
-						direction = 'level';
+						var ratio = 'level';
 					} else {
-						direction = 'down';
+						var ratio = 'down';
 					}
-					html += '<h4 class="boxed ' + direction + '">' + $(this).attr('alltimeuptimeratio') + '% Uptime</h4>';
+					html += '<h4 class="boxed ' + ratio + '">' + $(this).attr('alltimeuptimeratio') + '% Uptime</h4>';
 				}
 				
 				html += '<div class="breaker"></div>';
@@ -116,7 +116,7 @@
     					magnitude = Math.pow(10,order);
 					lastResponse = $(this).find("responsetime").first().attr('value');
 					//html +=  '<h5>Tiempo de Respuesta</h5>';
-					html += '<h5 class="equalize boxed up noborder">' + lastResponse + ' ms</h5>';
+					html += '<h5 class="equalize boxed ' + direction + ' noborder">' + lastResponse + ' ms</h5>';
 					html += '<div class="boxed"><div><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
 					html += '<div class="breaker xl"></div>';
 				}
