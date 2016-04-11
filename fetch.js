@@ -240,11 +240,11 @@ var Descriptions = [
 ];
 
 var Apologies = [
-	'There has been an error, have you felt it?',
-	'Our website is down, you will not be able to sign up. Sorry!',
-	'Trained bees have been dispatched to fix our over-heating servers.',
-	'Area 69 has been retired.',
-	'The aliens appear to have escaped. You shall be vaporised in vengeance shortly.'
+	'Something went wrong. Very, very, very wrong and the corporate proxy may be down.',
+	'There has been an error, have you felt it? Nexus isn\'t answering me.',
+	'There has been an error, have you felt it? Labs isn\'t answering me.',
+	'Somebody pulled the plug. No developing today!',
+	'Somebody pulled the plug. No developing today!'
 ];
 
 var CustomTime = false;
