@@ -140,7 +140,7 @@
 						direction = 'down';
 						status = 'AWOL';
 					}
-					html += '<h6 class="boxed noborder ' + direction + ' faded">' + status + ' &nbsp;&middot;&nbsp; ' + moment($(this).attr('datetime')).format('MM/DD/YYYY hh:mm') + '</h6>';					
+					html += '<h6 class="boxed noborder ' + direction + ' faded">' + status + ' &nbsp;&middot;&nbsp; ' + moment($(this).attr('datetime')).format('DD/MM/YYYY HH:mm') + '</h6>';					
 				});
 				
 				html += '</div>';
