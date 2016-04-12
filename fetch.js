@@ -117,6 +117,7 @@
 					lastResponse = $(this).find("responsetime").first().attr('value');
 					//html +=  '<h5>Tiempo de Respuesta</h5>';
 					html += '<h5 class="equalize boxed ' + direction + ' noborder">' + lastResponse + ' ms</h5>';
+					html += '<p class="equalize box small">' + moment($(this).find("responsetime").first().attr('datetime')).fromNow() + '</p>';
 					html += '<div class="boxed"><div><canvas id="chart-' + $(this).attr('id') + '" ></canvas></div></div>';
 					html += '<div class="breaker xl"></div>';
 				}
@@ -240,11 +241,11 @@ var Descriptions = [
 ];
 
 var Apologies = [
-	'Something went wrong. Very, very, very wrong and the corporate proxy may be down.',
-	'There has been an error, have you felt it? Nexus isn\'t answering me.',
-	'There has been an error, have you felt it? Labs isn\'t answering me.',
-	'Somebody pulled the plug. No developing today!',
-	'Somebody pulled the plug. No developing today!'
+	'Something went wrong. Very, very, very wrong.',
+	'There has been an error, have you felt it?',
+	'There has been an error, have you felt it?',
+	'Somebody pulled the plug.',
+	'Somebody pulled the plug.'
 ];
 
 var CustomTime = false;
