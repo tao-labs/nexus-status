@@ -140,7 +140,7 @@
 						direction = 'down';
 						status = 'AWOL';
 					}
-					html += '<h6 class="boxed noborder ' + direction + ' faded">' + status + ' &nbsp;&middot;&nbsp; ' + $(this).attr('datetime') + '</h6>';					
+					html += '<h6 class="boxed noborder ' + direction + ' faded">' + status + ' &nbsp;&middot;&nbsp; ' + moment($(this).attr('datetime')).format('MM/DD/YYYY hh:mm') + '</h6>';					
 				});
 				
 				html += '</div>';
@@ -251,7 +251,10 @@ var CustomTime = false;
 var Title = 'Nexus';
 
 $( document ).ready(function() {
-    console.log( "ready!" );
+	console.log( "ready!" );
+	
+	moment.locale("es");
+	
 	for (i = 0; i < ApiKeys.length; i++) { 
 		fetch(i+1, Descriptions[i], Apologies[i], ApiKeys[i], ApiKeys.length, CustomTime);
 	}	
