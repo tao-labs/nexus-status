@@ -286,6 +286,8 @@ h6.box { color: #000000 !important; }
 
 .boxed.noborder { border: none;}
 
+.normalheight{ line-height: 1em; }
+
 p.equalize{
 	font-size: 1.2em;
 }
