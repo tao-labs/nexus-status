@@ -123,7 +123,7 @@
 .component-status.down i.material-icons{ background-color: #e74c3c;}
 .component-status.level i.material-icons{ background-color: #E6B922;}
 
-.child-components-container .component-status. i.material-icons{ background-color: #95a5a6!important;}
+.child-components-container .component-status i.material-icons{ background-color: #95a5a6!important;}
 .child-components-container .component-status{ color: #95a5a6!important;}
 
 .color-secondary{
