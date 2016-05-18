@@ -550,6 +550,9 @@ function getService(ID, Service, Count, CustomTime) {
 					
 					$("#maincontent .section").append(avghtml);
 					
+					//Show content
+					$("#maincontentcontainer").fadeIn();
+					
 				}			
 
 
@@ -598,6 +601,8 @@ $( document ).ready(function() {
 	Chart.defaults.global.elements.line.borderColor = "#ddd";
 	Chart.defaults.global.elements.line.borderJoinStyle = 'round';
 	Chart.defaults.global.elements.line.fill = false;
+	
+	$("#maincontentcontainer").hide();
 	
 	for (i = 0; i < services.length; i++) { 
 		getService(i, services[i], services.length, CustomTime);
