@@ -433,24 +433,24 @@ function getService(ID, Service, Count, CustomTime) {
 							$(this).find("log").each(function(){
 								if ($(this).attr('type') == 2) {
 									direction = 'up';
-									status = 'Online';
-									icon = 'trending_up';
+									status = 'El servicio se encuentra disponible';
+									icon = 'donw';
 								} else if ($(this).attr('type') == 1) {
 									direction = 'down';
-									status = 'Offline';
-									icon = 'trending_down';
+									status = 'El servicio no se encuentra disponible';
+									icon = 'clear';
 								} else if ($(this).attr('type') == 98) {
-									direction = 'none';
-									status ='Started';
-									icon = 'add_to_queue';
+									direction = 'level';
+									status ='Fin de tareas de mantenimiento';
+									icon = 'blur_on';
 								} else if ($(this).attr('type') == 99) {
 									direction = 'level';
-									status = 'Paused';
-									icon = 'remove_from_queue';
+									status = 'Inicio de tareas de mantenimiento';
+									icon = 'blur_off';
 								} else {
-									direction = 'down';
-									status = 'AWOL';
-									icon = 'arrow_forward';
+									direction = 'none';
+									status = 'No se ha podido determinar el estado del servicio';
+									icon = 'flag';
 								}
 								
 								html += '<div class="component-inner-container color-secondary">';		
