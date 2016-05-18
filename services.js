@@ -602,7 +602,7 @@ $( document ).ready(function() {
 	Chart.defaults.global.elements.line.borderJoinStyle = 'round';
 	Chart.defaults.global.elements.line.fill = false;
 	
-	$("#maincontentcontainer").hide();
+	//$("#maincontentcontainer").hide();
 	
 	for (i = 0; i < services.length; i++) { 
 		getService(i, services[i], services.length, CustomTime);
