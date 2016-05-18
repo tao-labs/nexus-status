@@ -149,7 +149,7 @@ function parseHero(hero, ID){
 		//bleed += '<h2>' + $(hero).attr('friendlyname') + '</h2>';
 		
 		//Section
-		bleed += '<div class="section group bleed">';		
+		bleed += '<div class="section group bleed async">';		
 		
 		//Description and logo
 		bleed += '<div class="col span_3_of_6">';
