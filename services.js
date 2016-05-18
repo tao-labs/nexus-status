@@ -551,8 +551,7 @@ function getService(ID, Service, Count, CustomTime) {
 					$("#maincontent .section").append(avghtml);
 					
 					//Show content
-					$("#spinner").fadeOut();
-					$(".hidden").fadeIn();
+					$("#spinner").fadeOut(function(){$(".async").fadeIn()});
 					
 				}			
 
