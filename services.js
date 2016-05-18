@@ -281,7 +281,7 @@ function parseHero(hero, ID){
 							offsetGridLines: true,
 						},
 						ticks:{
-							autoSkip: false,
+							autoSkip: true,
 							fontColor: '#d0d0d0',
 						}
 					}],
