@@ -434,7 +434,7 @@ function getService(ID, Service, Count, CustomTime) {
 								if ($(this).attr('type') == 2) {
 									direction = 'up';
 									status = 'El servicio se encuentra disponible';
-									icon = 'donw';
+									icon = 'done';
 								} else if ($(this).attr('type') == 1) {
 									direction = 'down';
 									status = 'El servicio no se encuentra disponible';
