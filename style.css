@@ -130,7 +130,7 @@ html {
 #headcontainer,
 #maincontentcontainer,
 #footercontainer { width: 100%; }
-#headcontainer { background: #f9f9f9; }
+#headcontainer { background: white; }
 #footercontainer { background: #222; }
 header,
 #maincontent,
