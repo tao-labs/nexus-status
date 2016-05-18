@@ -324,27 +324,27 @@ function getService(ID, Service, Count, CustomTime) {
 				} else if ($(this).attr('status') == 9) {
 					var direction = 'down';
 					var status = 'Fuera de servicio';
-					var icon = 'done';
+					var icon = 'clear';
 					statuses.down ++;
 				} else if ($(this).attr('status') == 8) {
 					var direction = 'level';
 					var status = 'Con dificultades';
-					var icon = 'done';
+					var icon = 'flag';
 					statuses.difficulties ++;
 				} else if ($(this).attr('status') == 0) {
-					var direction = 'none';
+					var direction = 'level';
 					var status = 'En mantenimiento';
-					var icon = 'done';
+					var icon = 'blur_on';
 					statuses.paused ++;
 				} else if ($(this).attr('status') == 1) {
 					var direction = 'none';
 					var status ='Sin monitorizar';
-					var icon = 'done';
+					var icon = 'flag';
 					statuses.unchecked ++;
 				} else {
-					var direction = 'down';
-					var status = 'AWOL';
-					var icon = 'done';
+					var direction = 'none';
+					var status = 'Desconocido';
+					var icon = 'flag';
 					statuses.unchecked ++;
 				}
 				
