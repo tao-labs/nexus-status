@@ -365,6 +365,11 @@ h2.service-status i{
 	color: #ccc;
 }
 
+#spinner p{
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
 .sk-folding-cube {
   margin: 20px auto;
   width: 40px;
