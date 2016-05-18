@@ -296,7 +296,7 @@ p.equalize{
 .center { text-align: center; }
 .left { text-align: left; }
 
-.hidden { display:none; }
+.hidden, .async { display:none; }
 
 .highlight, .highlight:hover {
 	background: #4B98FF !important;
