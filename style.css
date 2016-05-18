@@ -359,3 +359,6 @@ h2.service-status i{
 	font: 700 0.8em/1.5 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
 	color: #999;
 }
+.bleed h5 span{
+	color: #ccc;
+}
