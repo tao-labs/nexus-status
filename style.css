@@ -329,6 +329,14 @@ h2.service-status.level { background: #FB8823; border-bottom: 3px solid #FFC089;
 #headcontainer.none h1 { color:#666;  }*/
 h2.service-status.none { background: #f0f0f0; border-bottom: 3px solid #F9F9F9; border-top: 3px solid #D8D8D8; color:#666; }
 
+h2.service-status{
+    font-size: 1.6em;
+    line-height: 2em;
+}
+
+h2.service-status i{
+    vertical-align: text-bottom;
+}
 
 
 .section.bleed{
