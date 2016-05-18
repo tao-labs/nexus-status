@@ -1,0 +1,152 @@
+.components-section {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    margin-bottom: 70px;
+	margin-top: 15px;
+	text-align: left;
+}
+
+.components-section .components-container {
+    overflow: hidden;
+}
+
+.components-section .components-container.one-column .component-container:first-child {
+    border-top-width: 1px;
+    border-radius: 4px 4px 0 0 !important;
+    -moz-border-radius: 4px 4px 0 0 !important;
+    -webkit-border-radius: 4px 4px 0 0 !important;
+    -o-border-radius: 4px 4px 0 0 !important;
+    -ms-border-radius: 4px 4px 0 0 !important;
+}
+.components-section .components-container.one-column .component-container {
+    /*width: 100%;*/
+    float: none;
+    border-bottom-width: 1px;
+    border-left-width: 1px !important;
+    border-right-width: 1px;
+    border-top-width: 0px;
+}
+.components-section .component-container {
+    padding: 1.1rem 1.25rem 1rem;
+    border-style: solid;
+}
+
+.components-section .component-container .component-inner-container{
+	background: transparent;
+}
+
+.components-section .components-container.one-column .component-container:last-child {
+    border-radius: 0 0 4px 4px !important;
+    -moz-border-radius: 0 0 4px 4px !important;
+    -webkit-border-radius: 0 0 4px 4px !important;
+    -o-border-radius: 0 0 4px 4px !important;
+    -ms-border-radius: 0 0 4px 4px !important;
+}
+
+.border-color{
+    border-color: #E0E0E0;
+}
+
+.components-section .component-container .name {
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    /*font-weight: 700;*/
+    max-width: 85%;
+}
+
+.components-section .components-container.one-column .component-container .component-status,
+.components-section .components-container.one-column .component-container .component-ratio {
+    display: inline-block;
+}
+.components-section .component-container .component-status,
+.components-section .component-container .component-ratio {
+    /*font-size: .875rem;*/
+    float: right;
+	background: transparent;
+}
+.components-section .component-container .component-status{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.components-section .component-container .childs-inner-container .component-status{
+    text-transform: none;
+    font-weight: 400;
+}
+.components-section .component-container .component-ratio{
+	margin-right: 20px;
+}
+
+.component-container.status-green:after, .status-green .icon-indicator, .components-container .component-inner-container.status-green .component-status, .components-container .component-inner-container.status-green .icon-indicator {
+    color: #2fcc66;
+}
+
+.components-section .component-container .icon-indicator {
+    float: right;
+    position: relative;
+    top: 4px;
+}
+
+.components-section .component-container .child-components-container .component-inner-container {
+    margin-top: .5rem;
+	padding-top: .5rem;
+    /*padding-left: 40px;
+	padding-right: 40px;*/
+	color: #aaa;
+	border-top: 1px solid #f0f0f0;
+	font-size: .875rem;
+}
+
+.components-section i.material-icons{
+	vertical-align: middle;
+}
+
+.component-status.up , .component-ratio.up{ color: #2ecc71;}
+.component-status.down , .component-ratio.down{ color: #e74c3c;}
+.component-status.level, .component-ratio.level{ color: #E6B922;}
+.component-status.none, .component-ratio.none{ color: #95a5a6;}
+
+.color-secondary{
+	color: #AAAAAA;
+}
+
+.components-section .component-container .child-components-container {
+    display: none;
+}
+
+.components-section .component-container.is-group.open .child-components-container {
+    display: block;
+}
+
+.components-section .component-container .child-components-container .component-inner-container i.material-icons{
+	vertical-align: text-top;
+	font-size: 18px;
+}
+
+.components-section .component-container .child-components-container .component-inner-container .ratio-column{
+	display: inline-block;
+	text-align: center;
+}
+
+.components-section .component-container .child-components-container .component-inner-container .ratio-column h6{
+	font-size: x-large;
+	/*font-weight: 600;*/
+	line-height: 1em;
+	padding-top:10px;
+}
+.components-section .component-container .child-components-container .component-inner-container .ratio-column span{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: smaller;
+	color: #555;
+}
+.components-section .component-container .child-components-container .component-inner-container .ratio-column .boxed{
+	/*padding: 0;
+	margin: 0;*/
+}
+    

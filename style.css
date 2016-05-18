@@ -134,6 +134,7 @@ html {
 #footercontainer { background: #222; }
 header,
 #maincontent,
+.maincontent,
 footer {
 	clear: both;
 	width: 80%;
@@ -149,8 +150,9 @@ header {
 #maincontentcontainer{
 	background: white;
 }
-#maincontent {
-	padding: 3% 0 7%;
+#maincontent,
+.maincontent {
+	padding: 3% 0 4%; /*7%;*/
 	color: #333;
 	line-height: 1.5em;
 	position: relative;
@@ -178,7 +180,7 @@ h3 {
 	text-transform: uppercase;
 }
 h4 {
-	font: 300 1.2em/2 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	font: 300 4em/1 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
 	color: #444;
 }
 h5 {
@@ -238,9 +240,7 @@ img {
 
 .clearfix { zoom: 1; }
 
-.right { text-align: right; }
-.center { text-align: center; }
-.left { text-align: left; }
+
 
 .clear { clear: both; }
 .clearleft { clear: left; }
@@ -292,9 +292,62 @@ p.equalize{
 	font-size: 1.2em;
 }
 
+.right { text-align: right; }
+.center { text-align: center; }
+.left { text-align: left; }
+
 .highlight, .highlight:hover {
 	background: #4B98FF !important;
 	color: #fefefe;
 	font-weight: 400;
 }
 .highlight a, .highlight a:hover { color: #ffffff; }
+
+h5.hero{
+	border-top: 1px solid #aaa;
+}
+
+.col.centered{
+	margin: 0 auto;
+	float: none;
+}
+
+
+#headcontainer.up { background: #1DBD61; }
+#headcontainer.up h1 { color:#019A43; }
+#headcontainer.up h2 { background: #2ecc71; border-bottom: 3px solid #ADF5CC; border-top: 3px solid #0CB956; color:#019A43;}
+
+#headcontainer.down { background: #e74c3c; }
+#headcontainer.down h1 { color:#C31907;  }
+#headcontainer.down h2 { background: #FD5F4F; border-bottom: 3px solid #FDA199; border-top: 3px solid #DE4333; color:#C31907; }
+
+#headcontainer.level { background: #e67e22; }
+#headcontainer.level h1 { color:#9C4E08;  }
+#headcontainer.level h2 { background: #FB8823; border-bottom: 3px solid #FFC089; border-top: 3px solid #CC650A; color:#9C4E08; }
+
+#headcontainer.none { background: #E4E4E4; }
+#headcontainer.none h1 { color:#666;  }
+#headcontainer.none h2 { background: #f0f0f0; border-bottom: 3px solid #F9F9F9; border-top: 3px solid #D8D8D8; color:#666; }
+
+
+
+.section.bleed{
+	background: #fefefe;
+    border-top: 3px solid #fafafa;
+    border-bottom: 3px solid #f0f0f0;
+    padding: 0 10%;
+}
+
+.bleed .chart{
+	padding: 3% 0;
+}
+
+.bleed h4{
+	font: 100 2.3em/1 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	padding-top: 36px;
+	
+}
+.bleed h5{
+	font: 700 0.8em/1.5 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	color: #999;
+}
