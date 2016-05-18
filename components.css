@@ -111,6 +111,14 @@
 .component-status.level, .component-ratio.level{ color: #E6B922;}
 .component-status.none, .component-ratio.none{ color: #95a5a6;}
 
+.component-status i.material-icons{
+    background: #2ECC71;
+    margin-left: 10px;
+    color: white;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
 .color-secondary{
 	color: #AAAAAA;
 }
