@@ -192,7 +192,7 @@ function parseHero(hero, ID){
 	
 	//Add to the DOM	
 	//$("#maincontent .section").append(html);
-	$("#maincontent").after(bleed);
+	$("h2.service-status").after(bleed);
 	
 	//Draw chart
 	if(maxy>0){
