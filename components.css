@@ -95,8 +95,8 @@
 .components-section .component-container .child-components-container .component-inner-container {
     margin-top: .5rem;
 	padding-top: .5rem;
-    padding-left: .2rem;
-	padding-right: .2rem;
+    /*padding-left: .2rem;
+	padding-right: .2rem;*/
 	color: #aaa;
 	border-top: 1px solid #f0f0f0;
 	font-size: .875rem;
@@ -118,12 +118,12 @@
     vertical-align: bottom;
 }
 
-.component-status.none i.material-icons, .component-status.none i.material-icons{ background-color: #95a5a6;}
-.component-status.up i.material-icons{ background-color: #2ecc71;}
-.component-status.down i.material-icons{ background-color: #e74c3c;}
-.component-status.level i.material-icons{ background-color: #E6B922;}
+.component-status.none i.material-icons, .component-status.none i.material-icons{ background-color: #95a5a6; color: #6B7373;}
+.component-status.up i.material-icons{ background-color: #2ecc71; color: #239A56;}
+.component-status.down i.material-icons{ background-color: #e74c3c; color: #C31907;}
+.component-status.level i.material-icons{ background-color: #E6B922; color: #B8860B;}
 
-.child-components-container .component-status i.material-icons{ background-color: #95a5a6!important;}
+.child-components-container .component-status i.material-icons{ background-color: #95a5a6!important; color: rgba(255,255,255,0.9)!important;}
 .child-components-container .component-status{ color: #95a5a6!important;}
 
 .color-secondary{
