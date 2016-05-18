@@ -169,11 +169,11 @@ function parseHero(hero, ID){
 		
 		//Last response
 		bleed += '<div class="col span_1_of_6">';		
-		bleed += '<h4 class="boxed noborder ' + direction + '">' + lastResponse + 'ms</h4><h5>Respuesta <span>(' + moment($(hero).find("responsetime").first().attr('datetime')).fromNow() + ')</span></h5></div>';
+		bleed += '<h4 class="boxed noborder ' + direction + '">' + lastResponse + 'ms</h4><h5>Respuesta </br><span>(' + moment($(hero).find("responsetime").first().attr('datetime')).fromNow() + ')</span></h5></div>';
 				
 		//Ratio
 		bleed += '<div class="col span_1_of_6">';	
-		bleed += '<h4 class="boxed noborder ' + ratio + '">' + $(hero).attr('alltimeuptimeratio') + '%</h4><h5>disponibilidad <span>(acumulada)</span></h5></div>';	
+		bleed += '<h4 class="boxed noborder ' + ratio + '">' + $(hero).attr('alltimeuptimeratio') + '%</h4><h5>disponibilidad </br><span>(acumulada)</span></h5></div>';	
 						
 		//Chart
 		bleed += '<div class="col span_1_of_1 chart">';
