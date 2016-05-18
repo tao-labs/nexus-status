@@ -505,25 +505,25 @@ function getService(ID, Service, Count, CustomTime) {
 
 					//Process the summary
 					if(statuses.up == services.length){
-						$("#headcontainer").addClass("up");
-						$("#headcontainer h2").prepend("Todos los servicios disponibles");
-						$("#headcontainer h2 i").html("done_all");
+						$("h2.service-status").addClass("up");
+						$("h2.service-status").prepend("Todos los servicios disponibles");
+						$("h2.service-status i").html("done_all");
 					}else if(statuses.down == services.length){
-						$("#headcontainer").addClass("down");
-						$("#headcontainer h2").prepend("Servicios no disponibles");
-						$("#headcontainer h2 i").html("clear");
+						$("h2.service-status").addClass("down");
+						$("h2.service-status").prepend("Servicios no disponibles");
+						$("h2.service-status i").html("clear");
 					}else if(statuses.maintenance == services.length){
-						$("#headcontainer").addClass("level");
-						$("#headcontainer h2").prepend("Realizando tareas de mantenimiento");
-						$("#headcontainer h2 i").html("flag");
+						$("h2.service-statusr").addClass("level");
+						$("h2.service-status").prepend("Realizando tareas de mantenimiento");
+						$("h2.service-status i").html("flag");
 					}else if(statuses.difficulties == services.length){
-						$("#headcontainer").addClass("level");
-						$("#headcontainer h2").prepend("Experimentando dificultades");
-						$("#headcontainer h2 i").html("flag");
+						$("h2.service-status").addClass("level");
+						$("h2.service-status").prepend("Experimentando dificultades");
+						$("h2.service-status i").html("flag");
 					}else{
-						$("#headcontainer").addClass("none");
-						$("#headcontainer h2").prepend("No se ha podido determinar");
-						$("#headcontainer h2 i").html("flag");
+						$("h2.service-status").addClass("none");
+						$("h2.service-status").prepend("No se ha podido determinar");
+						$("h2.service-status i").html("flag");
 					}
 					
 					//Process averages
