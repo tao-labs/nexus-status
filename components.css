@@ -95,8 +95,8 @@
 .components-section .component-container .child-components-container .component-inner-container {
     margin-top: .5rem;
 	padding-top: .5rem;
-    /*padding-left: 40px;
-	padding-right: 40px;*/
+    padding-left: .2rem;
+	padding-right: .2rem;
 	color: #aaa;
 	border-top: 1px solid #f0f0f0;
 	font-size: .875rem;
