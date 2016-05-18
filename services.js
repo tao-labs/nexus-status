@@ -506,23 +506,23 @@ function getService(ID, Service, Count, CustomTime) {
 					//Process the summary
 					if(statuses.up == services.length){
 						$("h2.service-status").addClass("up");
-						$("h2.service-status").prepend("Todos los servicios disponibles");
+						$("h2.service-status").prepend("Todos los servicios disponibles ");
 						$("h2.service-status i").html("done_all");
 					}else if(statuses.down == services.length){
 						$("h2.service-status").addClass("down");
-						$("h2.service-status").prepend("Servicios no disponibles");
+						$("h2.service-status").prepend("Servicios no disponibles ");
 						$("h2.service-status i").html("clear");
 					}else if(statuses.maintenance == services.length){
 						$("h2.service-statusr").addClass("level");
-						$("h2.service-status").prepend("Realizando tareas de mantenimiento");
+						$("h2.service-status").prepend("Realizando tareas de mantenimiento ");
 						$("h2.service-status i").html("flag");
 					}else if(statuses.difficulties == services.length){
 						$("h2.service-status").addClass("level");
-						$("h2.service-status").prepend("Experimentando dificultades");
+						$("h2.service-status").prepend("Experimentando dificultades ");
 						$("h2.service-status i").html("flag");
 					}else{
 						$("h2.service-status").addClass("none");
-						$("h2.service-status").prepend("No se ha podido determinar");
+						$("h2.service-status").prepend("No se ha podido determinar ");
 						$("h2.service-status i").html("flag");
 					}
 					
