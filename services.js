@@ -257,7 +257,8 @@ function parseHero(hero, ID){
 							displayFormats: {
 								'millisecond': 'SSS [ms]',
 								'second': 'h:mm:ss a', // 11:20:01 AM
-								'minute': 'h:mm:ss a', // 11:20:01 AM
+								//'minute': 'h:mm:ss a', // 11:20:01 AM
+								'minute': 'HH[h]',
 								//'hour': 'MMM D, hA', // Sept 4, 5PM
 								'hour': "HH[h]",
 								'day': 'll', // Sep 4 2015
