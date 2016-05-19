@@ -594,7 +594,16 @@ var weight = 0.0;
 $( document ).ready(function() {
 	console.log( "ready!" );
 	
-	moment.locale("es");
+	moment.locale("es",{
+	    calendar : {
+	        lastDay : '[Yesterday at] LT',
+	        sameDay : '[Today at] LT',
+	        nextDay : '[Tomorrow at] LT',
+	        lastWeek : '[last] dddd [at] LT',
+	        nextWeek : 'dddd [at] LT',
+	        sameElse : 'LT'
+	    }
+	});
 	
 	Chart.defaults.global.legend.display = false;	
 	Chart.defaults.global.defaultFontFamily = 'TeleGroteskScreen';
