@@ -137,9 +137,9 @@
 .component-status.down i.material-icons{ background-color: #e74c3c; color: #FFE7E5;}
 .component-status.level i.material-icons{ background-color: #E6B922; color: #FFF7E3;}*/
 
-.child-components-container .component-event-status i.material-icons, .child-components-container .component-event-time i.material-icons{ background-color: #95a5a6!important; color: rgba(255,255,255,0.9)!important;}
-.child-components-container .component-event-status{ color: #95a5a6!important;}
-.child-components-container .component-event-time{ color: #C5D1D2!important;}
+.child-components-container .component-event-status i.material-icons, .child-components-container .component-event-time i.material-icons{ background-color: #aaa!important; color: rgba(255,255,255,0.9)!important;}
+.child-components-container .component-event-status{ color: #999!important;}
+.child-components-container .component-event-time{ color: #CCC!important;}
 
 .color-secondary{
 	color: #AAAAAA;
