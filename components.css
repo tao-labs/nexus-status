@@ -36,6 +36,7 @@
 
 .components-section .component-container .component-inner-container{
 	background: transparent;
+	cursor: default;
 }
 
 .components-section .components-container.one-column .component-container:last-child {
