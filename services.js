@@ -100,7 +100,7 @@ function parseHero(hero, ID){
 	var lastResponse = 0;
 	var magnitude = 0;
 	
-	var latest = moment($(hero).find("responsetime").first().attr('datetime'));
+	var latest = moment($(hero).find("responsetime").first().attr('datetime')).endOf('hour');
 	
 	$(hero).find("responsetime").each(function(){
 		/*html += '<h5>Response Time</h5>';
