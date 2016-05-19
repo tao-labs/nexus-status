@@ -260,7 +260,7 @@ function parseHero(hero, ID){
 								//'minute': 'h:mm:ss a', // 11:20:01 AM
 								'minute': 'HH[:]mm',
 								//'hour': 'MMM D, hA', // Sept 4, 5PM
-								'hour': "HH[h]",
+								'hour': "HH[h]mm",
 								'day': 'll', // Sep 4 2015
 								'week': 'll', // Week 46, or maybe "[W]WW - YYYY" ?
 								'month': 'MMM YYYY', // Sept 2015
