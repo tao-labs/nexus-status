@@ -463,7 +463,7 @@ function getService(ID, Service, Count, CustomTime) {
 									/*html += '<i class="material-icons">schedule</i> ' + moment($(this).attr('datetime')).calendar();
 									html += '<span class="component-status ' + direction + '">' + status + ' <i class="material-icons">' + icon + '</i></span>';*/
 									html += '<i class="material-icons">' + icon + '</i> ' + status;
-									html += '<span class="component-status ' + direction + '">' + + moment($(this).attr('datetime')).calendar(); + '</span>'
+									html += '<span class="component-status ' + direction + '">' + moment($(this).attr('datetime')).calendar(); + '</span>'
 								
 								html += '</div>';
 							});
