@@ -79,7 +79,7 @@
 }
 .components-section .component-container .component-status{
     /*text-transform: uppercase;*/
-    font-weight: 700;
+    /*font-weight: 700;*/
 }
 .components-section .component-container .childs-inner-container .component-status{
     text-transform: none;
@@ -190,7 +190,7 @@
 }
 @media only screen and (max-width:799px) {
 	.components-section .component-container .name{  max-width: 90%; }
-	.components-section .component-container .component-status{float: none; width: 100%; text-align: right;}
+	.components-section .component-container .component-status, .components-section .component-container .component-event-time{float: none; width: 100%; text-align: right;}
 	.components-section .component-container .child-components-container .component-inner-container {text-align: center;}
 	.components-section .component-container .child-components-container .component-event-status, .components-section .component-container .child-components-container .component-event-time{text-align: center;}
 	.components-section .component-container .child-components-container .component-event-status i, .components-section .component-container .child-components-container .component-event-time i{ display: block; width: 18px; margin: 5px auto 0px auto;}
