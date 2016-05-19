@@ -101,7 +101,7 @@
 
 .components-section .component-container .child-components-container .component-inner-container {
     margin-top: .5rem;
-	padding-top: .5rem;
+	    padding: .5rem .5rem 0 .5rem;
     /*padding-left: .2rem;
 	padding-right: .2rem;*/
 	color: #aaa;
