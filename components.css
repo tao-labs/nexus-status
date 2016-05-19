@@ -114,7 +114,7 @@
 
 .component-status i.material-icons{
     margin-left: 10px;
-    color: rgba(255,255,255,0.9);
+    /*color: rgba(255,255,255,0.9);*/
     border-radius: 50%;
     vertical-align: bottom;
 }
