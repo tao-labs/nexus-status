@@ -138,7 +138,8 @@
 .component-status.level i.material-icons{ background-color: #E6B922; color: #FFF7E3;}*/
 
 .child-components-container .component-event-status i.material-icons, .child-components-container .component-event-time i.material-icons{ background-color: #95a5a6!important; color: rgba(255,255,255,0.9)!important;}
-.child-components-container .component-event-status, .child-components-container .component-event-time{ color: #95a5a6!important;}
+.child-components-container .component-event-status{ color: #95a5a6!important;}
+.child-components-container .component-event-time{ color: #C5D1D2!important;}
 
 .color-secondary{
 	color: #AAAAAA;
