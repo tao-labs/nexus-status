@@ -596,7 +596,7 @@ $( document ).ready(function() {
 	
 	moment.locale("es",{
 	    calendar : {
-	        sameElse : 'L LT'
+	        sameElse : 'LLLL'
 	    }
 	});
 	
