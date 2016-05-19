@@ -284,7 +284,7 @@ function parseHero(hero, ID){
 							autoSkip: true,
 							fontColor: '#d0d0d0',
 							maxRotation: 0,
-							maxTicksLimit: 6,
+							maxTicksLimit: 7,
 						}
 					}],
 					yAxes: [{
