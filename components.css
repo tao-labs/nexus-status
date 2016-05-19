@@ -68,13 +68,13 @@
     display: inline-block;
 }
 .components-section .component-container .component-status,
-.components-section .component-container .component-ratio {
+.components-section .component-container .component-ratio,
+.components-section .component-container .component-event-time{
     /*font-size: .875rem;*/
     float: right;
     background: transparent;
 }
-.components-section .component-container .component-event-status,
-.components-section .component-container .component-event-time{
+.components-section .component-container .component-event-status{
     background: transparent;	
 }
 .components-section .component-container .component-status{
@@ -118,8 +118,15 @@
 .component-status.level, .component-ratio.level, .component-event-status.level, .component-event-time.level{ color: #E6B922;}
 .component-status.none, .component-ratio.none, .component-event-status.none, .component-event-time.none{ color: #95a5a6;}
 
-.component-status i.material-icons{
+.component-status i.material-icons,
+.component-event-time i.material-icons{
     margin-left: 10px;
+    /*color: rgba(255,255,255,0.9);*/
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+.component-event-status i.material-icons{
+    margin-right: 10px;
     /*color: rgba(255,255,255,0.9);*/
     border-radius: 50%;
     vertical-align: bottom;
