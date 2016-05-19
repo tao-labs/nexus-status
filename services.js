@@ -361,9 +361,9 @@ function getService(ID, Service, Count, CustomTime) {
 						html += '<i class="material-icons trigger">expand_more</i>';
 						
 						if($(this).attr('type')==1){
-							html += '<span class="name"><b>' + name + '</b> <a href="' + $(this).attr('url') + '" title="Acceder"><i class="material-icons">chat</i></a> ' + Service.description + '</span>';
+							html += '<a href="' + $(this).attr('url') + '" title="Acceder"><span class="name"><b>' + name + '</b></a> ' + Service.description + '</span>';
 						}else{
-							html += '<span class="name"><b>' + name + '</b><i class="material-icons">subject</i> ' + Service.description + '</span>';
+							html += '<span class="name"><b>' + name + '</b> ' + Service.description + '</span>';
 						}
 						
 						html += '<span class="component-status ' + direction + '">' + status + '<i class="material-icons">' + icon + '</i></span>';
