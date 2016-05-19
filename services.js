@@ -100,6 +100,8 @@ function parseHero(hero, ID){
 	var lastResponse = 0;
 	var magnitude = 0;
 	
+	var latest = moment($(hero).find("responsetime").first().attr('datetime'));
+	
 	$(hero).find("responsetime").each(function(){
 		/*html += '<h5>Response Time</h5>';
 		html += '<h6 class="boxed';
@@ -112,8 +114,10 @@ function parseHero(hero, ID){
 					y: $(this).attr('value')
 				});
 		
-		data2.labels.push(new Date($(this).attr('datetime')));
-		data2.datasets[0].data.push($(this).attr('value'));
+		if(latest.diff(moment($(this).attr('datetime')), 'days', true)<1.00){
+			data2.labels.push(new Date($(this).attr('datetime')));
+			data2.datasets[0].data.push($(this).attr('value'));
+		}
 		
 		if($(this).attr('value')>maxy){maxy = $(this).attr('value');}
 		if($(this).attr('value')<miny){miny = $(this).attr('value');}
