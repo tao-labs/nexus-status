@@ -247,10 +247,10 @@ function parseHero(hero, ID){
 							unit: 'hour',
 
 							// Number - The number of steps of the above unit between ticks
-							unitStepSize: 3,
+							unitStepSize: 2,
 
 							// string - By default, no rounding is applied.  To round, set to a supported time unit eg. 'week', 'month', 'year', etc.
-							//round: 'hour',
+							round: 'hour',
 
 							// Moment js for each of the units. Replaces `displayFormat`
 							// To override, use a pattern string from http://momentjs.com/docs/#/displaying/format/
