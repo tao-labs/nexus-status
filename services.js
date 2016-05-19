@@ -244,13 +244,13 @@ function parseHero(hero, ID){
 							parser: false,
 							
 							// string - By default, unit will automatically be detected.  Override with 'week', 'month', 'year', etc. (see supported time measurements)
-							unit: 'hour',
+							unit: 'minute',
 
 							// Number - The number of steps of the above unit between ticks
-							unitStepSize: 2,
+							unitStepSize: 60,
 
 							// string - By default, no rounding is applied.  To round, set to a supported time unit eg. 'week', 'month', 'year', etc.
-							round: 'hour',
+							round: 'minute',
 
 							// Moment js for each of the units. Replaces `displayFormat`
 							// To override, use a pattern string from http://momentjs.com/docs/#/displaying/format/
@@ -306,7 +306,7 @@ function parseHero(hero, ID){
 
 function getService(ID, Service, Count, CustomTime) {
      
-	var apiUrl = 'http://api.uptimerobot.com/getMonitors?logs=1&format=xml&responseTimes=1&responseTimesAverage=30&logsLimit=6&apiKey=' + Service.apikey;
+	var apiUrl = 'http://api.uptimerobot.com/getMonitors?logs=1&format=xml&responseTimes=1&responseTimesAverage=15&logsLimit=6&apiKey=' + Service.apikey;
 	 
 	if (CustomTime) {apiUrl += '&customUptimeRatio=' + CustomTime;}
 	 
