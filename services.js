@@ -244,10 +244,10 @@ function parseHero(hero, ID){
 							parser: false,
 							
 							// string - By default, unit will automatically be detected.  Override with 'week', 'month', 'year', etc. (see supported time measurements)
-							unit: 'hour',
+							unit: 'minute',
 
 							// Number - The number of steps of the above unit between ticks
-							unitStepSize: 1.5,
+							unitStepSize: 90,
 
 							// string - By default, no rounding is applied.  To round, set to a supported time unit eg. 'week', 'month', 'year', etc.
 							//round: 'hour',
@@ -260,7 +260,7 @@ function parseHero(hero, ID){
 								//'minute': 'h:mm:ss a', // 11:20:01 AM
 								'minute': 'HH[:]mm',
 								//'hour': 'MMM D, hA', // Sept 4, 5PM
-								'hour': "HH[h]mm",
+								'hour': "HH[h]",
 								'day': 'll', // Sep 4 2015
 								'week': 'll', // Week 46, or maybe "[W]WW - YYYY" ?
 								'month': 'MMM YYYY', // Sept 2015
