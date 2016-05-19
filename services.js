@@ -247,7 +247,7 @@ function parseHero(hero, ID){
 							unit: 'minute',
 
 							// Number - The number of steps of the above unit between ticks
-							unitStepSize: 60,
+							unitStepSize: 120,
 
 							// string - By default, no rounding is applied.  To round, set to a supported time unit eg. 'week', 'month', 'year', etc.
 							round: 'minute',
