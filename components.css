@@ -62,14 +62,20 @@
 }
 
 .components-section .components-container.one-column .component-container .component-status,
-.components-section .components-container.one-column .component-container .component-ratio {
+.components-section .components-container.one-column .component-container .component-ratio,
+.components-section .components-container.one-column .component-container .component-event-status,
+.components-section .components-container.one-column .component-container .component-event-time{
     display: inline-block;
 }
 .components-section .component-container .component-status,
 .components-section .component-container .component-ratio {
     /*font-size: .875rem;*/
     float: right;
-	background: transparent;
+    background: transparent;
+}
+.components-section .component-container .component-event-status,
+.components-section .component-container .component-event-time{
+    background: transparent;	
 }
 .components-section .component-container .component-status{
     /*text-transform: uppercase;*/
@@ -107,10 +113,10 @@
 	vertical-align: middle;
 }
 
-.component-status.up, .component-ratio.up{ color: #2ecc71;}
-.component-status.down, .component-ratio.down{ color: #e74c3c;}
-.component-status.level, .component-ratio.level{ color: #E6B922;}
-.component-status.none, .component-ratio.none{ color: #95a5a6;}
+.component-status.up, .component-ratio.up, .component-event-status.up, .component-event-time.up{ color: #2ecc71;}
+.component-status.down, .component-ratio.down, .component-event-status.down, .component-event-time.down{ color: #e74c3c;}
+.component-status.level, .component-ratio.level, .component-event-status.level, .component-event-time.level{ color: #E6B922;}
+.component-status.none, .component-ratio.none, .component-event-status.none, .component-event-time.none{ color: #95a5a6;}
 
 .component-status i.material-icons{
     margin-left: 10px;
@@ -124,8 +130,8 @@
 .component-status.down i.material-icons{ background-color: #e74c3c; color: #FFE7E5;}
 .component-status.level i.material-icons{ background-color: #E6B922; color: #FFF7E3;}*/
 
-.child-components-container .component-status i.material-icons{ background-color: #95a5a6!important; color: rgba(255,255,255,0.9)!important;}
-.child-components-container .component-status{ color: #95a5a6!important;}
+.child-components-container .component-event-status i.material-icons, .child-components-container .component-event-time i.material-icons{ background-color: #95a5a6!important; color: rgba(255,255,255,0.9)!important;}
+.child-components-container .component-event-status, .child-components-container .component-event-time{ color: #95a5a6!important;}
 
 .color-secondary{
 	color: #AAAAAA;
@@ -180,6 +186,6 @@
 	.components-section .component-container .component-status{float: none; width: 100%; text-align: right;}
 	.components-section .component-container .child-components-container .component-inner-container {text-align: center;}
 	.components-section .component-container .child-components-container .component-inner-container>i:first-child {display:none;}
-	.components-section .component-container .child-components-container .component-status{text-align: center;}
-	.components-section .component-container .child-components-container .component-status i{ display: block; width: 18px; margin: 5px auto 0px auto;}
+	.components-section .component-container .child-components-container .component-event-status, .components-section .component-container .child-components-container .component-event-time{text-align: center;}
+	.components-section .component-container .child-components-container .component-event-status i, .components-section .component-container .child-components-container .component-event-time i{ display: block; width: 18px; margin: 5px auto 0px auto;}
 }
