@@ -598,7 +598,6 @@ $( document ).ready(function() {
 	Chart.defaults.global.legend.display = false;	
 	Chart.defaults.global.defaultFontFamily = 'TeleGroteskScreen';
 	Chart.defaults.global.animation.easing = 'easeInOutQuad';
-	Chart.defaults.global.maintainAspectRatio = false;
 	Chart.defaults.global.defaultColor = "#f0f0f0";
 	
 	Chart.defaults.global.elements.point.radius = 4;
