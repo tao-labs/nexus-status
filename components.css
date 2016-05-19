@@ -185,7 +185,6 @@
 	.components-section .component-container .name{  max-width: 90%; }
 	.components-section .component-container .component-status{float: none; width: 100%; text-align: right;}
 	.components-section .component-container .child-components-container .component-inner-container {text-align: center;}
-	.components-section .component-container .child-components-container .component-inner-container>i:first-child {display:none;}
 	.components-section .component-container .child-components-container .component-event-status, .components-section .component-container .child-components-container .component-event-time{text-align: center;}
 	.components-section .component-container .child-components-container .component-event-status i, .components-section .component-container .child-components-container .component-event-time i{ display: block; width: 18px; margin: 5px auto 0px auto;}
 }
