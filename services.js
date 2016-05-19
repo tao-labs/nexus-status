@@ -622,7 +622,7 @@ $( document ).ready(function() {
 	Chart.defaults.global.elements.line.borderWidth = 3;
 	Chart.defaults.global.elements.line.borderColor = "#ddd";
 	Chart.defaults.global.elements.line.borderJoinStyle = 'round';
-	Chart.defaults.global.elements.line.lineTension = 0.1;
+	Chart.defaults.global.elements.line.tension = 0.1;
 	Chart.defaults.global.elements.line.fill = false;
 	
 	//$("#maincontentcontainer").hide();
