@@ -244,10 +244,10 @@ function parseHero(hero, ID){
 							parser: false,
 							
 							// string - By default, unit will automatically be detected.  Override with 'week', 'month', 'year', etc. (see supported time measurements)
-							unit: 'hour',
+							unit: 'minute',
 
 							// Number - The number of steps of the above unit between ticks
-							unitStepSize: 1,
+							unitStepSize: 30,
 
 							// string - By default, no rounding is applied.  To round, set to a supported time unit eg. 'week', 'month', 'year', etc.
 							//round: 'hour',
