@@ -360,7 +360,11 @@ function getService(ID, Service, Count, CustomTime) {
 					
 						html += '<i class="material-icons trigger">expand_more</i>';
 						
-						html += '<span class="name"><b>' + name + '</b> ' + Service.description + '</span>';
+						if($(this).attr('type')==1){
+							html += '<span class="name"><b>' + name + '</b> <a href="' + $(this).attr('url') + '" title="Acceder"><i class="material-icons">link</i></a> ' + Service.description + '</span>';
+						}else{
+							html += '<span class="name"><b>' + name + '</b> ' + Service.description + '</span>';
+						}
 						
 						html += '<span class="component-status ' + direction + '">' + status + '<i class="material-icons">' + icon + '</i></span>';
 						
