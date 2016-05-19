@@ -72,7 +72,7 @@
 	background: transparent;
 }
 .components-section .component-container .component-status{
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-weight: 700;
 }
 .components-section .component-container .childs-inner-container .component-status{
@@ -119,10 +119,10 @@
     vertical-align: bottom;
 }
 
-.component-status.none i.material-icons, .component-status.none i.material-icons{ background-color: #95a5a6; color: #F3F3F3;}
+/*.component-status.none i.material-icons, .component-status.none i.material-icons{ background-color: #95a5a6; color: #F3F3F3;}
 .component-status.up i.material-icons{ background-color: #2ecc71; color: #F6FFFA;}
 .component-status.down i.material-icons{ background-color: #e74c3c; color: #FFE7E5;}
-.component-status.level i.material-icons{ background-color: #E6B922; color: #FFF7E3;}
+.component-status.level i.material-icons{ background-color: #E6B922; color: #FFF7E3;}*/
 
 .child-components-container .component-status i.material-icons{ background-color: #95a5a6!important; color: rgba(255,255,255,0.9)!important;}
 .child-components-container .component-status{ color: #95a5a6!important;}
