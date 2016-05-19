@@ -250,7 +250,7 @@ function parseHero(hero, ID){
 							unitStepSize: 2,
 
 							// string - By default, no rounding is applied.  To round, set to a supported time unit eg. 'week', 'month', 'year', etc.
-							round: 'hour',
+							round: 'minute',
 
 							// Moment js for each of the units. Replaces `displayFormat`
 							// To override, use a pattern string from http://momentjs.com/docs/#/displaying/format/
