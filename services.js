@@ -153,9 +153,9 @@ function parseHero(hero, ID){
 		
 		//Description and logo
 		bleed += '<div class="col span_3_of_6">';
-		bleed += '<h2 class="boxed left">'
+		bleed += '<h2 class="boxed left widescreen tooltip" data-tooltip="<b>' + $(hero).attr('friendlyname') + '</b> ' + services[ID].description + '">'
 		if($(hero).attr('type')==1){
-			bleed += '<a class="floatleft" href="' + $(hero).attr('url') + '"><img height="100px" src="' + $(hero).attr('id') + '.png" title="' + services[ID].description + '" alt="' + $(hero).attr('friendlyname') + '"></a>'
+			bleed += '<a class="" href="' + $(hero).attr('url') + '"><img height="100px" src="' + $(hero).attr('id') + '.png" title="' + services[ID].description + '" alt="' + $(hero).attr('friendlyname') + '"></a>'
 		}else{
 			bleed += '<img class="floatleft" height="100px" src="' + $(hero).attr('id') + '.png" title="' + services[ID].description + '" alt="' + $(hero).attr('friendlyname') + '">';
 		}
@@ -250,7 +250,7 @@ function parseHero(hero, ID){
 							unitStepSize: 1,
 
 							// string - By default, no rounding is applied.  To round, set to a supported time unit eg. 'week', 'month', 'year', etc.
-							round: 'hour',
+							//round: 'hour',
 
 							// Moment js for each of the units. Replaces `displayFormat`
 							// To override, use a pattern string from http://momentjs.com/docs/#/displaying/format/
@@ -267,7 +267,6 @@ function parseHero(hero, ID){
 								'year': 'YYYY', // 2015
 							},
 							
-							
 							// Sets the display format used in tooltip generation
 							tooltipFormat: 'HH:mm - dddd DD/MM/YYYY',
 						},													
@@ -283,6 +282,7 @@ function parseHero(hero, ID){
 						ticks:{
 							autoSkip: true,
 							fontColor: '#d0d0d0',
+							maxRotation: 0,
 						}
 					}],
 					yAxes: [{
@@ -334,7 +334,7 @@ function getService(ID, Service, Count, CustomTime) {
 				} else if ($(this).attr('status') == 0) {
 					var direction = 'level';
 					var status = 'En mantenimiento';
-					var icon = 'blur_on';
+					var icon = 'blur_off';
 					statuses.paused ++;
 				} else if ($(this).attr('status') == 1) {
 					var direction = 'none';
@@ -407,10 +407,12 @@ function getService(ID, Service, Count, CustomTime) {
 								}
 								
 								//add to averages
-								averages.daily = (parseFloat(averages.daily)+parseFloat(values[0])).toFixed(2);
-								averages.weekly = (parseFloat(averages.weekly)+parseFloat(values[1])).toFixed(2);
-								averages.monthly = (parseFloat(averages.monthly)+parseFloat(values[2])).toFixed(2);
-								averages.quarterly = (parseFloat(averages.quarterly)+parseFloat(values[3])).toFixed(2);
+								averages.daily = (parseFloat(averages.daily)+(parseFloat(values[0])*Service.weight)).toFixed(2);
+								averages.weekly = (parseFloat(averages.weekly)+(parseFloat(values[1])*Service.weight)).toFixed(2);
+								averages.monthly = (parseFloat(averages.monthly)+(parseFloat(values[2])*Service.weight)).toFixed(2);
+								averages.quarterly = (parseFloat(averages.quarterly)+(parseFloat(values[3])*Service.weight)).toFixed(2);
+								
+								weight = (parseFloat(weight)+parseFloat(Service.weight)).toFixed(2);
 								
 								if ($(this).attr('alltimeuptimeratio') >= 99) {
 									ratio = 'up';
@@ -527,11 +529,17 @@ function getService(ID, Service, Count, CustomTime) {
 					}
 					
 					//Process averages
-					averages.daily = (parseFloat(averages.daily)/(services.length)).toFixed(2);
+					/*averages.daily = (parseFloat(averages.daily)/(services.length)).toFixed(2);
 					averages.weekly = (parseFloat(averages.weekly)/(services.length)).toFixed(2);
 					averages.monthly = (parseFloat(averages.monthly)/(services.length)).toFixed(2);
 					averages.quarterly = (parseFloat(averages.quarterly)/(services.length)).toFixed(2);
-					averages.alltime = (parseFloat(averages.alltime)/(services.length)).toFixed(2);
+					averages.alltime = (parseFloat(averages.alltime)/(services.length)).toFixed(2);*/	
+
+					averages.daily = (parseFloat(averages.daily)/(weight)).toFixed(2);
+					averages.weekly = (parseFloat(averages.weekly)/(weight)).toFixed(2);
+					averages.monthly = (parseFloat(averages.monthly)/(weight)).toFixed(2);
+					averages.quarterly = (parseFloat(averages.quarterly)/(weight)).toFixed(2);
+					averages.alltime = (parseFloat(averages.alltime)/(weight)).toFixed(2);						
 					
 					var avgs = [averages.daily, averages.weekly, averages.monthly, averages.quarterly, averages.alltime];					
 					var splits = CustomTime.split('-');
@@ -578,6 +586,7 @@ var Title = 'Nexus';
 var statuses = { up: 0, down: 0, difficulties: 0, paused: 0, unchecked: 0}
 
 var averages = { daily: 0.0, weekly: 0.0, monthly: 0.0, quarterly: 0.0, alltime: 0.0}
+var weight = 0.0;
 
 $( document ).ready(function() {
 	console.log( "ready!" );

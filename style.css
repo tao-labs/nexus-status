@@ -296,6 +296,8 @@ p.equalize{
 .center { text-align: center; }
 .left { text-align: left; }
 
+
+
 .hidden, .async { display:none; }
 
 .highlight, .highlight:hover {
@@ -340,12 +342,18 @@ h2.service-status i{
     vertical-align: text-bottom;
 }
 
+#maincontent h4.boxed,
+.bleed h4.boxed{
+	padding-bottom: 0;
+    margin-bottom: 0;
+}
 
 .section.bleed{
 	background: #fefefe;
     border-top: 3px solid #fafafa;
     border-bottom: 3px solid #f0f0f0;
     padding: 0 10%;
+	margin-top: 5%;
 }
 
 .bleed .chart{
@@ -363,6 +371,10 @@ h2.service-status i{
 }
 .bleed h5 span{
 	color: #ccc;
+}
+
+img#logo{
+	margin-bottom:3%;
 }
 
 #spinner p{
@@ -456,4 +468,20 @@ h2.service-status i{
             transform: perspective(140px) rotateY(180deg);
     opacity: 0; 
   }
+}
+
+
+
+/* Final screen size fixes */
+@media only screen and (min-width:1440px) { 
+
+}
+@media only screen and (max-width:1024px) and (min-width:800px) {
+	h4{ font: 300 3em/1 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif; }
+}
+@media only screen and (max-width:799px) {
+	.widescreen.right, .widescreen.left { text-align: center; }
+	h1{ font: 300 4em/1.1 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif ; padding-bottom: .9em;}
+	h4{ font: 300 3.5em/1 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif; }
+}
 }
