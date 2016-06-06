@@ -599,11 +599,11 @@ function showIssues(){
 					
 			html += '<div class="component-inner-container">';
 			
-				html += '<i class="material-icons trigger">'+value.type+'</i>';
-
 				html += '<h5 class="center"><b>' + value.subject + '</b></h5>';
 
 				html += '<p class="center">'+ value.description + '</p>';
+				
+				html += '<i class="material-icons">'+value.type+'</i>';
 				
 				html += '<h6 class="center">desde ' + moment(value.start).calendar() + ' hasta ' + moment(value.end).calendar() + '</h6>';
 	
