@@ -603,7 +603,7 @@ function showIssues(){
 
 				html += '<span class="name"><b>' + value.subject + '</b> ' + value.description + '</span>';
 
-				html += '<span class="component-status">' + moment(value.start).calendar() + ' hasta ' + moment(value.end).calendar() + '<i class="material-icons">date_range</i></span>';
+				html += '<span class="component-status">desde ' + moment(value.start).calendar() + ' hasta ' + moment(value.end).calendar() + '<i class="material-icons">date_range</i></span>';
 	
 			html += '</div>';
 		
