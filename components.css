@@ -1,4 +1,4 @@
-.components-section {
+.components-section, .issues-section {
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -9,11 +9,11 @@
 	text-align: left;
 }
 
-.components-section .components-container {
+/*.components-section*/ .components-container {
     overflow: hidden;
 }
 
-.components-section .components-container.one-column .component-container:first-child {
+/*.components-section*/ .components-container.one-column .component-container:first-child {
     border-top-width: 1px;
     border-radius: 4px 4px 0 0 !important;
     -moz-border-radius: 4px 4px 0 0 !important;
@@ -21,25 +21,24 @@
     -o-border-radius: 4px 4px 0 0 !important;
     -ms-border-radius: 4px 4px 0 0 !important;
 }
-.components-section .components-container.one-column .component-container {
-    /*width: 100%;*/
+/*.components-section*/ .components-container.one-column .component-container {
     float: none;
     border-bottom-width: 1px;
     border-left-width: 1px !important;
     border-right-width: 1px;
     border-top-width: 0px;
 }
-.components-section .component-container {
+/*.components-section*/ .component-container {
     padding: 1.1rem 1.25rem 1rem;
     border-style: solid;
 }
 
-.components-section .component-container .component-inner-container{
+/*.components-section*/ .component-container .component-inner-container{
 	background: transparent;
 	cursor: default;
 }
 
-.components-section .components-container.one-column .component-container:last-child {
+/*.components-section*/ .components-container.one-column .component-container:last-child {
     border-radius: 0 0 4px 4px !important;
     -moz-border-radius: 0 0 4px 4px !important;
     -webkit-border-radius: 0 0 4px 4px !important;
@@ -51,7 +50,7 @@
     border-color: #E0E0E0;
 }
 
-.components-section .component-container .name {
+/*.components-section*/ .component-container .name {
     vertical-align: middle;
     overflow: hidden;
     white-space: nowrap;
@@ -61,45 +60,48 @@
     max-width: 85%;
 }
 
-.components-section .components-container.one-column .component-container .component-status,
-.components-section .components-container.one-column .component-container .component-ratio,
-.components-section .components-container.one-column .component-container .component-event-status,
-.components-section .components-container.one-column .component-container .component-event-time{
+/*.components-section*/ .components-container.one-column .component-container .component-status,
+/*.components-section*/ .components-container.one-column .component-container .component-ratio,
+/*.components-section*/ .components-container.one-column .component-container .component-event-status,
+/*.components-section*/ .components-container.one-column .component-container .component-event-time{
     display: inline-block;
 }
-.components-section .component-container .component-status,
-.components-section .component-container .component-ratio,
-.components-section .component-container .component-event-time{
+/*.components-section*/ .component-container .component-status,
+/*.components-section*/ .component-container .component-ratio,
+/*.components-section*/ .component-container .component-event-time{
     /*font-size: .875rem;*/
     float: right;
     background: transparent;
 }
-.components-section .component-container .component-event-status{
+/*.components-section*/ .component-container .component-event-status{
     background: transparent;	
 }
-.components-section .component-container .component-status{
+/*.components-section*/ .component-container .component-status{
     /*text-transform: uppercase;*/
     /*font-weight: 700;*/
 }
-.components-section .component-container .childs-inner-container .component-status{
+/*.components-section*/ .component-container .childs-inner-container .component-status{
     text-transform: none;
     font-weight: 400;
 }
-.components-section .component-container .component-ratio{
+/*.components-section*/ .component-container .component-ratio{
 	margin-right: 20px;
 }
 
-.component-container.status-green:after, .status-green .icon-indicator, .components-container .component-inner-container.status-green .component-status, .components-container .component-inner-container.status-green .icon-indicator {
+.component-container.status-green:after, 
+.status-green .icon-indicator,
+.components-container .component-inner-container.status-green .component-status,
+.components-container .component-inner-container.status-green .icon-indicator {
     color: #2fcc66;
 }
 
-.components-section .component-container .icon-indicator {
+/*.components-section*/ .component-container .icon-indicator {
     float: right;
     position: relative;
     top: 4px;
 }
 
-.components-section .component-container .child-components-container .component-inner-container {
+/*.components-section*/ .component-container .child-components-container .component-inner-container {
     margin-top: .5rem;
 	    padding: .5rem .5rem 0 .5rem;
     /*padding-left: .2rem;
@@ -109,7 +111,8 @@
 	font-size: .875rem;
 }
 
-.components-section i.material-icons{
+.components-section i.material-icons,
+.issues-section i.material-icons{
 	vertical-align: middle;
 }
 
@@ -145,37 +148,37 @@
 	color: #AAAAAA;
 }
 
-.components-section .component-container .child-components-container {
+/*.components-section*/ .component-container .child-components-container {
     display: none;
 }
 
-.components-section .component-container.is-group.open .child-components-container {
+/*.components-section*/.component-container.is-group.open .child-components-container {
     display: block;
 }
 
-.components-section .component-container .child-components-container .component-inner-container i.material-icons{
+/*.components-section*/ .component-container .child-components-container .component-inner-container i.material-icons{
 	vertical-align: text-top;
 	font-size: 18px;
 }
 
-.components-section .component-container .child-components-container .component-inner-container .ratio-column{
+/*.components-section*/ .component-container .child-components-container .component-inner-container .ratio-column{
 	display: inline-block;
 	text-align: center;
 }
 
-.components-section .component-container .child-components-container .component-inner-container .ratio-column h6{
+/*.components-section*/ .component-container .child-components-container .component-inner-container .ratio-column h6{
 	font-size: x-large;
 	/*font-weight: 600;*/
 	line-height: 1em;
 	padding-top:10px;
 }
-.components-section .component-container .child-components-container .component-inner-container .ratio-column span{
+/*.components-section*/ .component-container .child-components-container .component-inner-container .ratio-column span{
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: smaller;
 	color: #555;
 }
-.components-section .component-container .child-components-container .component-inner-container .ratio-column .boxed{
+/*.components-section*/ .component-container .child-components-container .component-inner-container .ratio-column .boxed{
 	padding-bottom: 0;
     margin-bottom: 0;
 }
@@ -190,9 +193,9 @@
 
 }
 @media only screen and (max-width:799px) {
-	.components-section .component-container .name{  max-width: 90%; }
-	.components-section .component-container .component-status, .components-section .component-container .component-event-time{float: none; width: 100%; text-align: right;}
-	.components-section .component-container .child-components-container .component-inner-container {text-align: center;}
-	.components-section .component-container .child-components-container .component-event-status, .components-section .component-container .child-components-container .component-event-time{text-align: center;}
-	.components-section .component-container .child-components-container .component-event-status i, .components-section .component-container .child-components-container .component-event-time i{ display: block; width: 18px; margin: 5px auto 0px auto;}
+	/*.components-section*/ .component-container .name{  max-width: 90%; }
+	/*.components-section*/ .component-container .component-status, /*.components-section*/ .component-container .component-event-time{float: none; width: 100%; text-align: right;}
+	/*.components-section*/ .component-container .child-components-container .component-inner-container {text-align: center;}
+	/*.components-section*/ .component-container .child-components-container .component-event-status, /*.components-section*/ .component-container .child-components-container .component-event-time{text-align: center;}
+	/*.components-section*/ .component-container .child-components-container .component-event-status i, /*.components-section*/ .component-container .child-components-container .component-event-time i{ display: block; width: 18px; margin: 5px auto 0px auto;}
 }
