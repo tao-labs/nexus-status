@@ -482,7 +482,7 @@ img#logo{
 @media only screen and (max-width:799px) {
 	.widescreen.right, .widescreen.left { text-align: center; }
 	h1{ font: 300 4em/1.1 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif ; padding-bottom: .15em;  padding-top: 1em;}
-	h2.service-status{ position:fixed; top:0; width:100%; z-index:999; }
+	h2.service-status{ position:fixed; top:0; width:100%; z-index:999; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 	h4{ font: 300 3.5em/1 TeleGroteskScreen, 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif; }
 	.section.bleed{ padding-top: 30px; border-top-color:#f0f0f0; }
 	.bleed .chart { padding: 60px 0 30px; }
