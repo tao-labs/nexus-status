@@ -574,6 +574,11 @@ function getService(ID, Service, Count, CustomTime) {
 					//Show content
 					$("#spinner").fadeOut(function(){$(".async").fadeIn()});
 					
+					//Show issues
+					if(issues.length>0){
+						showIssues();
+					}
+					
 				}			
 
 
@@ -583,6 +588,32 @@ function getService(ID, Service, Count, CustomTime) {
 	
 }
 
+function showIssues(){
+	
+	var html = '';
+	
+	$(issues).each(function(){
+		
+		html += '<div class="component-container border-color">';
+					
+			html += '<div class="component-inner-container">';
+			
+				html += '<i class="material-icons trigger">'+$(this).type+'</i>';
+
+				html += '<span class="name"><b>' + $(this).subject + '</b> ' + $(this).description + '</span>';
+
+				html += '<span class="component-status">' + $(this).start + $(this).end + '<i class="material-icons">date_range</i></span>';
+	
+			html += '</div>';
+		
+		html += '</div>';
+		
+	});
+	
+	$(".issues-section .components-container").append(html);
+	
+	
+}
 
 var CustomTime = "1-7-30-90";
 
@@ -597,7 +628,6 @@ var TimeTags = [
 var Title = 'Nexus';
 
 var statuses = { up: 0, down: 0, difficulties: 0, paused: 0, unchecked: 0}
-
 var averages = { daily: 0.0, weekly: 0.0, monthly: 0.0, quarterly: 0.0, alltime: 0.0}
 var weight = 0.0;
 
