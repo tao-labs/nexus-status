@@ -630,6 +630,7 @@ function showIssues(){
 	});
 	
 	$(".issues-section .components-container").append(html);
+	$(".issues-section").fadeIn();
 	
 	
 }
