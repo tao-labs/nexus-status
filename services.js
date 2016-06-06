@@ -536,7 +536,7 @@ function getService(ID, Service, Count, CustomTime) {
 						$("h2.service-status").addClass("level");
 						$("h2.service-status").prepend("Experimentando dificultades graves ");
 						$("h2.service-status i").html("flag");
-					}else if(statuses.down == 0 && statuses.difficulties == 0 && (statuses.up > statuses.paused + statuses.uncheked)
+					}else if(statuses.down == 0 && statuses.difficulties == 0 && (statuses.up > statuses.paused + statuses.unchecked))
 						$("h2.service-status").addClass("up");
 						$("h2.service-status").prepend("Los servicios se encuentran mayoritariamente disponibles ");
 						$("h2.service-status i").html("done");
