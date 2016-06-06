@@ -189,6 +189,7 @@
 .issues-section .component-container .name{  max-width: 90%; vertical-align: top; white-space: normal; text-overflow: initial; padding-bottom: 10px; }
 .issues-section h5{ color: #e6b922; }
 .issues-section .border-color {border-color: #FFE386;    background: #FFF5D3;}
+.issues-section .material-icons {display: block;}
 
 /* Final screen size fixes */
 @media only screen and (min-width:1440px) { 
