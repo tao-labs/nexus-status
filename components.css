@@ -186,8 +186,10 @@
 /* Issues section fixes */
 
 .issues-section .component-container .component-status{float: none; width: 100%; text-align: right;}
-.issues-section .component-container .name{  max-width: 90%; }
-	
+.issues-section .component-container .name{  max-width: 90%; vertical-align: top; white-space: normal; text-overflow: initial; padding-bottom: 10px; }
+.issues-section h5{ color: #e6b922; }
+.issues-section .border-color {border-color: #FFE386;    background: #FFF5D3;}
+
 /* Final screen size fixes */
 @media only screen and (min-width:1440px) { 
 
