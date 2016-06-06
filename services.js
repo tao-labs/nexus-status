@@ -341,7 +341,7 @@ function getService(ID, Service, Count, CustomTime) {
 				} else if ($(this).attr('status') == 0) {
 					var direction = 'level';
 					var status = 'En mantenimiento';
-					var icon = 'blur_off';
+					var icon = 'blur_on';
 					statuses.paused ++;
 				} else if ($(this).attr('status') == 1) {
 					var direction = 'none';
@@ -455,11 +455,11 @@ function getService(ID, Service, Count, CustomTime) {
 								} else if ($(this).attr('type') == 98) {
 									direction = 'level';
 									status ='Fin de tareas de mantenimiento';
-									icon = 'blur_on';
+									icon = 'blur_off';
 								} else if ($(this).attr('type') == 99) {
 									direction = 'level';
 									status = 'Inicio de tareas de mantenimiento';
-									icon = 'blur_off';
+									icon = 'blur_on';
 								} else {
 									direction = 'none';
 									status = 'No se ha podido determinar el estado del servicio';
