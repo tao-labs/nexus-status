@@ -603,7 +603,7 @@ function showIssues(){
 
 				html += '<p class="center">'+ value.description + '</p>';
 				
-				html += '<i class="material-icons">'+value.type+'</i>';
+				html += '<i class="material-icons center">'+value.type+'</i>';
 				
 				html += '<h6 class="center">desde ' + moment(value.start).calendar() + ' hasta ' + moment(value.end).calendar() + '</h6>';
 	
