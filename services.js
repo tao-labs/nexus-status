@@ -601,9 +601,11 @@ function showIssues(){
 			
 				html += '<i class="material-icons trigger">'+value.type+'</i>';
 
-				html += '<span class="name"><b>' + value.subject + '</b> ' + value.description + '</span>';
+				html += '<h5 class="center"><b>' + value.subject + '</b></h5>';
 
-				html += '<span class="component-status">desde ' + moment(value.start).calendar() + ' hasta ' + moment(value.end).calendar() + '<i class="material-icons">date_range</i></span>';
+				html += '<p class="center">'+ value.description + '</p>';
+				
+				html += '<h6 class="center">desde ' + moment(value.start).calendar() + ' hasta ' + moment(value.end).calendar() + '</h6>';
 	
 			html += '</div>';
 		
