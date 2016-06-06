@@ -528,17 +528,33 @@ function getService(ID, Service, Count, CustomTime) {
 						$("h2.service-status").addClass("down");
 						$("h2.service-status").prepend("Servicios no disponibles ");
 						$("h2.service-status i").html("clear");
-					}else if(statuses.maintenance == services.length){
+					}else if(statuses.paused == services.length){
 						$("h2.service-statusr").addClass("level");
 						$("h2.service-status").prepend("Realizando tareas de mantenimiento ");
 						$("h2.service-status i").html("flag");
 					}else if(statuses.difficulties == services.length){
 						$("h2.service-status").addClass("level");
-						$("h2.service-status").prepend("Experimentando dificultades ");
+						$("h2.service-status").prepend("Experimentando dificultades graves ");
+						$("h2.service-status i").html("flag");
+					}else if(statuses.down == 0 && statuses.difficulties == 0 && (statuses.up > statuses.paused + statuses.uncheked)
+						$("h2.service-status").addClass("up");
+						$("h2.service-status").prepend("Los servicios se encuentran mayoritariamente disponibles ");
+						$("h2.service-status i").html("done");
+					}else if(statuses.down > statuses.up){
+						$("h2.service-status").addClass("level");
+						$("h2.service-status").prepend("Servicios mayoritariamente no disponibles ");
+						$("h2.service-status i").html("flag");
+					}else if(statuses.paused > statuses.up){
+						$("h2.service-status").addClass("level");
+						$("h2.service-status").prepend("Realizando tareas de mantenimiento ");
+						$("h2.service-status i").html("flag");
+					}else if(statuses.difficulties > statuses.up){
+						$("h2.service-status").addClass("level");
+						$("h2.service-status").prepend("Experimentando dificultades leves ");
 						$("h2.service-status i").html("flag");
 					}else{
-						$("h2.service-status").addClass("none");
-						$("h2.service-status").prepend("No se ha podido determinar ");
+						$("h2.service-status").addClass("level");
+						$("h2.service-status").prepend("Experimentando dificultades ");
 						$("h2.service-status i").html("flag");
 					}
 					
