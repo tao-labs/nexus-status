@@ -538,7 +538,7 @@ function getService(ID, Service, Count, CustomTime) {
 						$("h2.service-status i").html("flag");
 					}else if(statuses.down == 0 && statuses.difficulties == 0 && (statuses.up > (statuses.paused + statuses.unchecked))){
 						$("h2.service-status").addClass("up");
-						$("h2.service-status").prepend("Servicios disponibles ");
+						$("h2.service-status").prepend("Servicios disponibles sin afectaciones imprevistas ");
 						$("h2.service-status i").html("done");
 					}else if(statuses.down > statuses.up){
 						$("h2.service-status").addClass("level");
