@@ -593,17 +593,17 @@ function showIssues(){
 	
 	var html = '';
 	
-	$(issues).each(function(){
+	$.each(issues, function(index, value){
 		
 		html += '<div class="component-container border-color">';
 					
 			html += '<div class="component-inner-container">';
 			
-				html += '<i class="material-icons trigger">'+$(this).type+'</i>';
+				html += '<i class="material-icons trigger">'+value.type+'</i>';
 
-				html += '<span class="name"><b>' + $(this).subject + '</b> ' + $(this).description + '</span>';
+				html += '<span class="name"><b>' + value.subject + '</b> ' + value.description + '</span>';
 
-				html += '<span class="component-status">' + $(this).start + $(this).end + '<i class="material-icons">date_range</i></span>';
+				html += '<span class="component-status">' + value.start + value.end + '<i class="material-icons">date_range</i></span>';
 	
 			html += '</div>';
 		
