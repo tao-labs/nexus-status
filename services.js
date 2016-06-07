@@ -406,9 +406,10 @@ function getService(ID, Service, Count, CustomTime) {
 								html += '<div class="ratio-column span_1_of_' + (values.length + 2) +'"><h6 class="boxed noborder ' + direction + '">' + lastResponse + 'ms</h6><span>' + moment($(this).find("responsetime").first().attr('datetime')).fromNow() + '</span></div>';							
 								
 								for (i = 0; i < values.length; i++) {
-									if(i==0 && values[i]<1 && $(this).attr('status') == 0){
-										values[i] = 100; //Fix: if monitor is paused for a day, this ratio will be broken
-									}
+									//if(i==0 && values[i]<1 && $(this).attr('status') == 0){
+										//values[i] = 100; //Fix: if monitor is paused for a day, this ratio will be broken
+										//Similar fixes should be done for weekly, monthly... but take into account the
+									//}
 									
 									if (values[i] >= 99) {
 										var ratio = 'up';
