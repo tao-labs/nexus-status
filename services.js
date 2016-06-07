@@ -407,6 +407,7 @@ function getService(ID, Service, Count, CustomTime) {
 								
 								//Fix to ratios if in maintenance more than the ratio observed time
 								if($(this).attr('status') == 0){
+									console.log("in maintenance");
 									//Get latest maintenance time
 									var maintdate = $(this).find("log").fisrt().attr('datetime');
 									var ranges = CustomTime.split('-');
@@ -414,6 +415,7 @@ function getService(ID, Service, Count, CustomTime) {
 									//If > 1 day, force values[0]=100, etc
 									for(i = 0; i < values.length; i++){
 										if(moment(maintdate).isBefore(moment().subtract(ranges[i], 'days'))){
+											console.log("inside window");
 											values[i]=100;
 										}	
 									}
