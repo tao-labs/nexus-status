@@ -405,11 +405,30 @@ function getService(ID, Service, Count, CustomTime) {
 								
 								html += '<div class="ratio-column span_1_of_' + (values.length + 2) +'"><h6 class="boxed noborder ' + direction + '">' + lastResponse + 'ms</h6><span>' + moment($(this).find("responsetime").first().attr('datetime')).fromNow() + '</span></div>';							
 								
+								//Fix to ratios if in maintenance more than the ratio observed time
+								if($(this).attr('status') == 0){
+									//Get latest maintenance time
+									var maintdate = $(this).find("log").fisrt().attr('datetime');
+									var ranges = CustomTime.split('-');
+									
+									//If > 1 day, force values[0]=100, etc
+									for(i = 0; i < values.length; i++){
+										if(moment(maintdate).isBefore(moment().subtract(ranges[i], 'days'))){
+											values[i]=100;
+										}	
+									}
+
+									//If > 1 day, force values[0]=100
+									//If > 7 days, force values[1]=100
+									//If > 30 days, force values[2]=100
+									//If > 90 days, force values[3]=100
+								}
+								
 								for (i = 0; i < values.length; i++) {
-									//if(i==0 && values[i]<1 && $(this).attr('status') == 0){
+									if(i==0 && values[i]<1 && $(this).attr('status') == 0){
 										//values[i] = 100; //Fix: if monitor is paused for a day, this ratio will be broken
 										//Similar fixes should be done for weekly, monthly... but take into account the
-									//}
+									}
 									
 									if (values[i] >= 99) {
 										var ratio = 'up';
