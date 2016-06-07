@@ -409,7 +409,7 @@ function getService(ID, Service, Count, CustomTime) {
 								if($(this).attr('status') == 0){
 									console.log("in maintenance");
 									//Get latest maintenance time
-									var maintdate = $(this).find("log").fisrt().attr('datetime');
+									var maintdate = $(this).find("log").first().attr('datetime');
 									var ranges = CustomTime.split('-');
 									
 									//If > 1 day, force values[0]=100, etc
