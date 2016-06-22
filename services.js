@@ -616,7 +616,8 @@ function getService(ID, Service, Count, CustomTime) {
 					if(issues.length>0){
 						showIssues();
 					}else{
-						$(".issues-section").parents(".maincontent.async").remove();	
+						$("#issues-title").remove();	
+						$(".issues-section").remove();	
 					}
 					
 				}			
