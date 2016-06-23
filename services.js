@@ -293,10 +293,10 @@ function parseHero(hero, ID){
 						}
 					}],
 					yAxes: [{
-						//display: false,
-						ticks: {
+						display: false,
+						/*ticks: {
 				                    beginAtZero:true
-				                }
+				                }*/
 					}]
 				},
 				tooltips: {
