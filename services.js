@@ -181,7 +181,7 @@ function parseHero(hero, ID){
 						
 		//Chart
 		bleed += '<div class="col span_1_of_1 chart">';
-		bleed += '<div><canvas width="600" height="200" id="chart-' + $(hero).attr('id') + '" ></canvas></div>';
+		bleed += '<div><canvas width="600" height="100" id="chart-' + $(hero).attr('id') + '" ></canvas></div>';
 		bleed += '</div>';
 		/*
 		bleed += '<div class="col span_1_of_4">';		
