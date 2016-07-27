@@ -41,6 +41,18 @@
 		<script type="text/javascript" src="issues.config"></script>
 		<script type="text/javascript" src="services.js"></script>
 		<!--<script type="text/javascript" src="fetch.js"></script>-->
+		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+		<script>
+		    var OneSignal = OneSignal || [];
+		    OneSignal.push(["init", {
+		      appId: "80a96dee-a60e-4830-9d0b-3ff0549aca5d",
+		      autoRegister: false, /* Set to true to automatically prompt visitors */
+		      subdomainName: 'nexus',   
+		      notifyButton: {
+		          enable: true /* Set to false to hide */
+		      }
+		    }]);
+		</script>
 		
 	</head>
 	<body>
