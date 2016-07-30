@@ -710,7 +710,7 @@ $( document ).ready(function() {
 	//$("#maincontentcontainer").hide();
 	
 	$.getJSON("services.json", function(json) {
-	    console.log(json services loaded); // this will show the info it in firebug console
+	    console.log("json services loaded"); // this will show the info it in firebug console
 	    services = json.services;
 	    
 	    for (i = 0; i < services.length; i++) { 
