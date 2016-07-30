@@ -677,6 +677,12 @@ var statuses = { up: 0, down: 0, difficulties: 0, paused: 0, unchecked: 0}
 var averages = { daily: 0.0, weekly: 0.0, monthly: 0.0, quarterly: 0.0, alltime: 0.0}
 var weight = 0.0;
 
+var services;
+$.getJSON("services.config", function(json) {
+    console.log(json); // this will show the info it in firebug console
+    services = json;
+});
+
 $( document ).ready(function() {
 	console.log( "ready!" );
 	
