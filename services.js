@@ -682,11 +682,6 @@ var services;
 $( document ).ready(function() {
 	console.log( "ready!" );
 	
-	$.getJSON("services.json", function(json) {
-	    console.log(json); // this will show the info it in firebug console
-	    services = json.services;
-	});
-	
 	moment.locale("es",{
 	    calendar : {
 	        sameElse : 'LLLL'
@@ -714,7 +709,15 @@ $( document ).ready(function() {
 	
 	//$("#maincontentcontainer").hide();
 	
-	for (i = 0; i < services.length; i++) { 
+	$.getJSON("services.json", function(json) {
+	    console.log(json services loaded); // this will show the info it in firebug console
+	    services = json.services;
+	    
+	    for (i = 0; i < services.length; i++) { 
 		getService(i, services[i], services.length, CustomTime);
-	}	
+	    }
+	    
+	});
+	
+		
 });
