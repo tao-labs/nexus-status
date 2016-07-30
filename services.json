@@ -6,7 +6,7 @@
 			"description": "Conectividad con Internet",
 			"problem": "Something went wrong. Very, very, very wrong.",
 			"ishero": false,
-			"weight": 25.0,
+			"weight": 25.0
 		},
 		{
 			"id": "777605993",
@@ -14,7 +14,7 @@
 			"description": "Entorno de producción",
 			"problem": "There has been an error, have you felt it?",
 			"ishero": true,
-			"weight": 60.0,
+			"weight": 60.0
 		},
 		{
 			"id": "777754563",
@@ -22,7 +22,7 @@
 			"description": "Recursos del entorno de producción",
 			"problem": "There has been an error, have you felt it?",
 			"ishero": false,
-			"weight": 8.0,
+			"weight": 8.0
 		},		
 		{
 			"id": "777605997",
@@ -30,7 +30,7 @@
 			"description": "Entorno de preproducción",
 			"problem": "There has been an error, have you felt it?",
 			hero: false,
-			"weight": 3.5,
+			"weight": 3.5
 		},
 		{
 			"id": "777605998",
@@ -38,7 +38,7 @@
 			"description": "Entorno de desarrollo en versión actual",
 			"problem": "Somebody pulled the plug.",
 			"ishero": false,
-			"weight": 0.25,
+			"weight": 0.25
 		},
 		{
 			"id": "777606001",
@@ -46,7 +46,7 @@
 			"description": "Entorno de desarrollo en versión futura",
 			"problem": "Somebody pulled the plug.",
 			"ishero": false,
-			"weight": 0.25,
+			"weight": 0.25
 		},
 		{
 			"id": "777754544",
@@ -54,7 +54,7 @@
 			"description": "Página de inicio de sesión",
 			"problem": "Oops.",
 			"ishero": false,
-			"weight": 0.5,
+			"weight": 0.5
 		},
 		{
 			"id": "777757098",
@@ -62,7 +62,7 @@
 			"description": "Descargas",
 			"problem": "Oops.",
 			"ishero": false,
-			"weight": 0.5,
+			"weight": 0.5
 		},
 		{
 			"id": "777757136",
@@ -70,7 +70,7 @@
 			"description": "Servicios de actualización de aplicaciones",
 			"problem": "Oops.",
 			"ishero": false,
-			"weight": 0.5,
+			"weight": 0.5
 		},
 		{
 			"id": "777757095",
@@ -78,7 +78,7 @@
 			"description": "@t-systems.com",
 			"problem": "Oops.",
 			"ishero": false,
-			"weight": 0.5,
+			"weight": 0.5
 		},
 		{
 			"id": "777757096",
@@ -86,7 +86,7 @@
 			"description": "@t-systemsIB.es",
 			"problem": "Oops.",
 			"ishero": false,
-			"weight": 0.5,
+			"weight": 0.5
 		},
 		{
 			"id": "777757097",
@@ -94,7 +94,7 @@
 			"description": "@t-systemsIB.es",
 			"problem": "Oops.",
 			"ishero": false,
-			"weight": 0.5,
+			"weight": 0.5
 		}
 		
 	]
