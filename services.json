@@ -6,6 +6,7 @@
 			"description": "Conectividad con Internet",
 			"problem": "Something went wrong. Very, very, very wrong.",
 			"ishero": false,
+			"hasicon": true,
 			"weight": 25.0
 		},
 		{
@@ -14,6 +15,7 @@
 			"description": "Entorno de producción",
 			"problem": "There has been an error, have you felt it?",
 			"ishero": true,
+			"hasicon": true,
 			"weight": 60.0
 		},
 		{
@@ -22,6 +24,7 @@
 			"description": "Recursos del entorno de producción",
 			"problem": "There has been an error, have you felt it?",
 			"ishero": false,
+			"hasicon": false,
 			"weight": 8.0
 		},		
 		{
@@ -30,6 +33,7 @@
 			"description": "Entorno de preproducción",
 			"problem": "There has been an error, have you felt it?",
 			"ishero": false,
+			"hasicon": true,
 			"weight": 3.5
 		},
 		{
@@ -38,6 +42,7 @@
 			"description": "Entorno de desarrollo en versión actual",
 			"problem": "Somebody pulled the plug.",
 			"ishero": false,
+			"hasicon": true,
 			"weight": 0.25
 		},
 		{
@@ -46,6 +51,7 @@
 			"description": "Entorno de desarrollo en versión futura",
 			"problem": "Somebody pulled the plug.",
 			"ishero": false,
+			"hasicon": true,
 			"weight": 0.25
 		},
 		{
@@ -54,6 +60,7 @@
 			"description": "Página de inicio de sesión",
 			"problem": "Oops.",
 			"ishero": false,
+			"hasicon": false,
 			"weight": 0.5
 		},
 		{
@@ -62,6 +69,7 @@
 			"description": "Descargas",
 			"problem": "Oops.",
 			"ishero": false,
+			"hasicon": false,
 			"weight": 0.5
 		},
 		{
@@ -70,6 +78,7 @@
 			"description": "Servicios de actualización de aplicaciones",
 			"problem": "Oops.",
 			"ishero": false,
+			"hasicon": false,
 			"weight": 0.5
 		},
 		{
@@ -78,6 +87,7 @@
 			"description": "@t-systems.com",
 			"problem": "Oops.",
 			"ishero": false,
+			"hasicon": false,
 			"weight": 0.5
 		},
 		{
@@ -86,6 +96,7 @@
 			"description": "@t-systemsIB.es",
 			"problem": "Oops.",
 			"ishero": false,
+			"hasicon": false,
 			"weight": 0.5
 		},
 		{
@@ -94,6 +105,7 @@
 			"description": "@t-systemsIB.es",
 			"problem": "Oops.",
 			"ishero": false,
+			"hasicon": false,
 			"weight": 0.5
 		}
 		
