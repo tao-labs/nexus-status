@@ -61,7 +61,7 @@
 			"problem": "Oops.",
 			"ishero": false,
 			"hasicon": false,
-			"weight": 0.5
+			"weight": 1.0
 		},
 		{
 			"id": "777757096",
@@ -70,7 +70,7 @@
 			"problem": "Oops.",
 			"ishero": false,
 			"hasicon": false,
-			"weight": 1.0
+			"weight": 1.5
 		},
 		{
 			"id": "777757097",
@@ -79,7 +79,7 @@
 			"problem": "Oops.",
 			"ishero": false,
 			"hasicon": false,
-			"weight": 1.0
+			"weight": 1.5
 		}
 		
 	]
