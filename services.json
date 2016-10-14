@@ -34,7 +34,7 @@
 			"problem": "Oops.",
 			"ishero": false,
 			"hasicon": false,
-			"weight": 0.5
+			"weight": 1.5
 		},
 		{
 			"id": "777757098",
@@ -43,7 +43,7 @@
 			"problem": "Oops.",
 			"ishero": false,
 			"hasicon": false,
-			"weight": 0.5
+			"weight": 1.5
 		},
 		{
 			"id": "777757136",
@@ -52,7 +52,7 @@
 			"problem": "Oops.",
 			"ishero": false,
 			"hasicon": false,
-			"weight": 0.5
+			"weight": 1.5
 		},
 		{
 			"id": "777757095",
@@ -70,7 +70,7 @@
 			"problem": "Oops.",
 			"ishero": false,
 			"hasicon": false,
-			"weight": 0.5
+			"weight": 1.0
 		},
 		{
 			"id": "777757097",
@@ -79,7 +79,7 @@
 			"problem": "Oops.",
 			"ishero": false,
 			"hasicon": false,
-			"weight": 0.5
+			"weight": 1.0
 		}
 		
 	]
