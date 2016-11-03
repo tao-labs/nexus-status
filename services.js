@@ -314,7 +314,7 @@ function parseHero(hero, ID){
 
 function getService(ID, Service, Count, CustomTime) {
      
-	var apiUrl = 'http://api.uptimerobot.com/getMonitors?logs=1&format=xml&responseTimes=1&responseTimesAverage=15&logsLimit=6&apiKey=' + Service.apikey;
+	var apiUrl = 'https://api.uptimerobot.com/getMonitors?logs=1&format=xml&responseTimes=1&responseTimesAverage=15&logsLimit=6&apiKey=' + Service.apikey;
 	 
 	if (CustomTime) {apiUrl += '&customUptimeRatio=' + CustomTime;}
 	 
